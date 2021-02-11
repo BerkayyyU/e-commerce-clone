@@ -1,5 +1,5 @@
 html{
-  font-size: 62.5%; /* Default browser size 16px x 62.5 = 10px = 1 rem*/
+  font-size: 62.5%; 
   box-sizing: border-box;
 }
 body{
@@ -13,7 +13,7 @@ body{
 #root{
   height: 100%;
 }
-/* Layout */
+
 .grid-container{
   display: grid;
   grid-template-areas: 
@@ -38,7 +38,6 @@ footer{
   color: white;
 }
 
-/* Common */
 h1{
   font-size: 1.8rem;
   padding: 1rem 0;
@@ -124,7 +123,7 @@ img.large{
   width: 40%;
 }
 
-/*Card*/
+/* Card */
 .card{
   border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
@@ -145,7 +144,7 @@ img.large{
   font-size: 2rem;
 }
 
-/*Alert */
+/* Alert */
 .alert{
   padding: 1rem;
   border: 0.1rem solid transparent;
