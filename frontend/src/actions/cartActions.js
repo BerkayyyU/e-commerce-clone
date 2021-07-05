@@ -9,7 +9,7 @@ export const addToCart = (productId) => async(dispatch, getState) => {
             name : data.name,
             image: data.image,
             price: data.price,
-            product: data.id, // While adding product to DB i use "product" instead of "productId"
+            product: data._id, // While adding product to DB i use "product" instead of "productId"
         },
     });
     localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems)); // Saves products to localStorage which are added to cart thus products in the card will not be deleted after the page refresh

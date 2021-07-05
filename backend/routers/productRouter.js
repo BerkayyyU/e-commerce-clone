@@ -2,11 +2,8 @@ import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import data from "../data.js";
 import Product from "../models/productModel.js";
-import mongoose from "mongoose";
 
 const productRouter = express.Router();
-
-
 
 productRouter.get("/", // API FOR ALL PRODUCTS
     expressAsyncHandler(async (req, res) => { // sending list of products to the frontend 
@@ -34,6 +31,5 @@ productRouter.get("/:id", //API FOR PRODUCT DETAILS
     }
 
 }));
-
 
 export default productRouter;

@@ -17,11 +17,11 @@ export default function CartScreen(props){
         }
     }, [dispatch, productId]);
 
-    const removeFromCartHandler = (id) =>{ //Sepete eklenen ürünü sepetten çıkarma
+    const removeFromCartHandler = (id) =>{ //Discard the product in the card
         dispatch(removeFromCart(id));
     };
 
-    const checkoutHandler = () =>{ //Siparişe gitmesi için kullanıcıyı kayıt olma yerine götürecek
+    const checkoutHandler = () =>{ //Redirect user to the signin for the placing order
         props.history.push('/signin?redirect=shipping');
     };
 

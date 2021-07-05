@@ -37,14 +37,14 @@ export default function PlaceOrderScreen(props){
                                 </p>
                             </div>
                         </li>
-                        {/* <li>
+                         <li>
                             <div className="card card-body">
                                 <h2>Ödeme Yöntemi</h2>
                                 <p>
                                     <strong>Method:</strong> {cart.paymentMethod}
                                 </p>
                             </div>
-                        </li> */}
+                        </li> 
                         <li>
                             <div className="card card-body">
                                 <h2>Ürünler</h2>
