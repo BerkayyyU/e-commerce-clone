@@ -61,7 +61,7 @@ export default function CartScreen(props){
                             <h2>Toplam Fiyat : {cartItems.reduce((a, c) => a + c.price,0)} TL</h2> 
                         </li>
                         <li>
-                            <button type="button" onClick={checkoutHandler} className="primary block-green" disabled={cartItems.lenght===0}>Siparişe Git</button>
+                            <button type="button" onClick={checkoutHandler} className="block-green" disabled={cartItems.lenght===0}>Siparişe Git</button>
                         </li>
                     </ul>
                 </div>

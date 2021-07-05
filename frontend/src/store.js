@@ -7,10 +7,18 @@ import { userRegisterReducer, userSigninReducer } from "./reducers/userReducers"
 
 const initialState = {
     userSignin: {
-        userInfo: localStorage.getItem("userInfo") ? JSON.parse(localStorage.getItem("userInfo")):null, //  if we refresh the page we still will be signed in
+        userInfo: localStorage.getItem("userInfo")   //  if user refresh the page user still will be signed in
+        ? JSON.parse(localStorage.getItem("userInfo"))
+        : null,
     },
     cart:{
-        cartItems: localStorage.getItem('cartItems')? JSON.parse(localStorage.getItem('cartItems')): [], // if we refresh the page cart still will be the same
+        cartItems: localStorage.getItem('cartItems') // Check the cart from localStorage and if user refresh the page cart still will be the same
+        ? JSON.parse(localStorage.getItem('cartItems'))
+        : [], 
+        shippingAddress: localStorage.getItem("shippingAddress") // Check the user shipping address and if it exists automatically fill it for the next ones.
+        ? JSON.parse(localStorage.getItem("shippingAddress"))
+        : {}, // 
+        paymentMethod: "PayPal",
     },
 };
 

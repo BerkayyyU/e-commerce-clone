@@ -5,23 +5,16 @@ import { detailsProduct } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 
-//  import Product from '../components/Product';
-// import data from '../data'; // gerek yok artık
-
 export default function ProductScreen(props) {
     const dispatch = useDispatch();
-    const productId = props.match.params.id
+    const productId = props.match.params.id;
     const productDetails = useSelector ((state) => state.productDetails);
-    const {loading, error, product} = productDetails;
+    const {loading, error, product} = productDetails; 
 
     useEffect(()=>{
         dispatch(detailsProduct(productId));
     }, [dispatch, productId]);
 
-    // const product = data.products.find(x => x.id === props.match.params.id);  statik olarak ürünleri frontend'den değil ürünleri product details'den redux store'dan göstericez
-    // if (!product) {
-    //     return <div>Ürün bulunamadı!</div>
-    // }
     const addToCartHandler = () =>{
         props.history.push(`/cart/${productId}`);
     }

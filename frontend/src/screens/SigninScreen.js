@@ -36,12 +36,12 @@ export default function SigninScreen(props){
                 {loading && <LoadingBox></LoadingBox>}
                 {error && <MessageBox variant="danger">{error}</MessageBox>} 
                 <div>
-                    <label htmlFor="email">Email address</label>
-                    <input type="email" id="email" placeholder="Enter email" required onChange={e => setEmail(e.target.value)}></input>
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" id="email"  required onChange={e => setEmail(e.target.value)}></input>
                 </div>
                 <div>
-                    <label htmlFor="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter password" required onChange={e => setPassword(e.target.value)}></input>
+                    <label htmlFor="password">Şifre:</label>
+                    <input type="password" id="password" required onChange={e => setPassword(e.target.value)}></input>
                 </div>
                 <div>
                     <label></label>
