@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
+import orderRouter from './routers/orderRouter.js';
 
 dotenv.config(); // to read .env file and use
 
@@ -28,6 +29,8 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/e-commerce", { 
 app.use("/api/users", userRouter);
 
 app.use("/api/products", productRouter); // responder is productRouter
+
+app.use("/api/orders", orderRouter);
 
 // app.get('/api/products', (req, res)=>{ We remove this cause of we are no longer sending data from data.js statically. we are getting data from mongodb
 //     res.send(data.products);

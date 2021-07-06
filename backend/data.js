@@ -162,7 +162,7 @@ const data = {
             image:"/images/product-21.jpg",
             price: 35,
             description: "açıklama21"
-        },
-     ],
+        }
+     ]
 };
 export default data;
