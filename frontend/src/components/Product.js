@@ -13,6 +13,7 @@ export default function Product(props) {
                     <h2>{product.name}</h2>
                 </Link>
                 <div className="category">{product.category}</div>
+                <div className="city">{product.city}</div>
                 <div className="price">{product.price} TL</div>       
                    
             </div>

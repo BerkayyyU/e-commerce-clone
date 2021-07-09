@@ -36,15 +36,14 @@ export default function ProductScreen(props) {
                             <h1>{product.name}</h1>
                         </li>
                         <li>
-                            Fiyat: {product.price} TL
-                    </li>
-                        <li>
-                            Açıklama:
+                            <h4>Açıklama:</h4>
                         <p>{product.description}</p>
+                        </li>
+                        <li>
+                            <h4>Şehir:</h4> {product.city}
                         </li>
                     </ul>
                 </div>
-            
                 <div className="col-1">
                     <div className="card card-body">
                         <ul>
