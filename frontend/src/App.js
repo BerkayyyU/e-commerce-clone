@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { listProductCategories } from './actions/productActions';
 import { signout } from './actions/userActions';
 import SearchBox from './components/SearchBox';
 import CartScreen from './screens/CartScreen';
@@ -22,7 +23,10 @@ function App() {
   const dispatch = useDispatch();
   const signoutHandler = () =>{
     dispatch(signout());
-  }
+  };
+  useEffect(()=>{
+    dispatch(listProductCategories());
+  }, [dispatch]);
 
   return (
     <BrowserRouter>
@@ -64,6 +68,8 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/search/name/:name?" component={SearchScreen} exact></Route>
+          <Route path="/search/category/:category" component={SearchScreen} exact></Route>
+          <Route path="/search/category/:category/name/:name" component={SearchScreen} exact></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center"> Copyright @2021 Berkay Ulguel</footer>

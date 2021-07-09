@@ -8,9 +8,17 @@ const productRouter = express.Router();
 productRouter.get("/", // API FOR ALL PRODUCTS
     expressAsyncHandler(async (req, res) => { // sending list of products to the frontend 
         const name = req.query.name || '';
+        const category = req.query.category || '';
         const nameFilter = name ? { name: {$regex: name, $options: 'i'} } : {}; // To find if the name "contains" not exactly matches
-        const products = await Product.find({...nameFilter}); //return all products
+        const categoryFilter = category ? {category} : {};
+        const products = await Product.find({...nameFilter, ...categoryFilter}); //return all products
         res.send(products);
+}));
+
+productRouter.get('/categories',
+    expressAsyncHandler(async (req, res) => {
+        const categories = await Product.find().distinct('category'); // Get categories
+        res.send(categories);
 }));
 
 productRouter.get("/seed", //create products based on data.products 

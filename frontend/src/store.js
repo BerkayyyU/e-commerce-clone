@@ -3,7 +3,7 @@ import thunk from "redux-thunk";
 // import data from "./data";
 import { cartReducer } from "./reducers/cartReducers";
 import { orderCreateReducer, orderDetailsReducer } from "./reducers/orderReducers";
-import { productDetailsReducer, productListReducer } from "./reducers/productReducers";
+import { productCategoryListReducer, productDetailsReducer, productListReducer } from "./reducers/productReducers";
 import { userRegisterReducer, userSigninReducer } from "./reducers/userReducers";
 
 const initialState = {
@@ -31,6 +31,7 @@ const reducer = combineReducers({ // implement reducers
     userRegister: userRegisterReducer,
     orderCreate: orderCreateReducer,
     orderDetails: orderDetailsReducer,
+    productCategoryList: productCategoryListReducer,
 });
 
 // const reducer = (state, action) =>{ //Reducer 2 parametre alır state ve action products üzerindeki state değişikliklerini action ile değiştirip data'yı geri döndürür.
