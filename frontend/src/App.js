@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import { signout } from './actions/userActions';
+import SearchBox from './components/SearchBox';
 import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen';
 import OrderScreen from './screens/OrderScreen';
@@ -9,6 +10,7 @@ import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProductScreen from './screens/ProductScreen';
 import RegisterScreen from './screens/RegisterScreen';
+import SearchScreen from './screens/SearchScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
 
@@ -28,6 +30,9 @@ function App() {
         <header className="row">
           <div>
             <Link className="brand" to="/">E-Commerce</Link>
+          </div>
+          <div>
+            <Route render={({history}) => ( <SearchBox history={history}></SearchBox>/*Pass react router dom properties to the search box using render function */)}></Route> 
           </div>
           <div>
             <Link to="/cart">Sepet
@@ -58,6 +63,7 @@ function App() {
           <Route path="/payment" component={PaymentMethodScreen}></Route> 
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
+          <Route path="/search/name/:name?" component={SearchScreen} exact></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center"> Copyright @2021 Berkay Ulguel</footer>

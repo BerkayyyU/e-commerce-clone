@@ -9,11 +9,6 @@ export default function OrderScreen(props){
     const orderId = props.match.params.id;
     const orderDetails = useSelector(state => state.orderDetails);
     const {order, loading, error} = orderDetails;
-    // const userSignin = useSelector((state) => state.userSignin);
-    // const {userInfo} = userSignin;
-    // if(!userInfo){ 
-    //     props.history.push("/signin");
-    // }
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(detailsOrder(orderId));
