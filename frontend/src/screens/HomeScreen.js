@@ -29,21 +29,20 @@ export default function HomeScreen(props) {
     return (
         <div>
             <div className="col-1">
-                    <h3>Categories</h3>
                         {loadingCategories ? (
                         <LoadingBox></LoadingBox>
                         ) : errorCategories ? (
                         <MessageBox variant="danger">{error}</MessageBox>
                         ) : (
-                        <ul>
+                        <div>
                             {categories.map(c=>(
-                                <li key={c}>
-                                    <Link className={c===category ? 'active' : ''} to={ getFilterUrl({ category : c })}>{c}</Link>
-                                </li>
+                                <button className="categories" key={c}>
+                                    <Link  className="category" to={ getFilterUrl({ category : c })}>{c}</Link>
+                                </button>
                             ))}
-                        </ul>
+                        </div>
                         )}
-                </div>
+            </div>
             {loading ? ( <LoadingBox></LoadingBox>
             ) : error ? (
             <MessageBox variant="danger">{error}</MessageBox>

@@ -29,33 +29,20 @@ export default function SearchScreen(props){
 
     return (
         <div>
-            <div className="row ">
-                {loading ? (
-                <LoadingBox></LoadingBox>
-                ) : error ? (
-                <MessageBox variant="danger">{error}</MessageBox>
-                ) : (
-                <div>{products.length} Results</div>
-                )}
-            </div>
-            <div className="row top">
-                <div className="col-1">
-                    <h3>Categories</h3>
-                        {loadingCategories ? (
+            {loadingCategories ? (
                         <LoadingBox></LoadingBox>
                         ) : errorCategories ? (
                         <MessageBox variant="danger">{error}</MessageBox>
                         ) : (
-                        <ul>
+                        <div>
                             {categories.map(c=>(
-                                <li key={c}>
-                                    <Link className={c===category ? 'active' : ''} to={ getFilterUrl({ category : c })}>{c}</Link>
-                                </li>
+                                <button className={c === category ?  'categories-active' : 'categories'}  key={c}>
+                                    <Link  className="category" to={ getFilterUrl({ category : c })}>{c}</Link>
+                                </button>
                             ))}
-                        </ul>
+                        </div>
                         )}
-                </div>
-                <div className="col-3">
+
                     {loading ? (
                     <LoadingBox></LoadingBox>
                     ) : error ? (
@@ -72,8 +59,13 @@ export default function SearchScreen(props){
                         </div>
                       </>
                     )}
-                </div>
-            </div>
+                {loading ? (
+                <LoadingBox></LoadingBox>
+                ) : error ? (
+                <MessageBox variant="danger">{error}</MessageBox>
+                ) : (
+                <div className="results"><p className="result">{products.length} ürün bulundu.</p></div>
+                )}
         </div>
     )
 }

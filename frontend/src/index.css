@@ -243,3 +243,27 @@ img.large{
   border-right: none;
   margin-left: 0.5rem;
 }
+/*More CSS*/
+.categories{
+  color: #ffffff;
+  background-color: rgb(153, 16, 43);
+  margin: 5rem 6.5rem 5rem 6.5rem;
+}
+.category{
+  color: #ffffff;
+}
+.categories-active{
+  color: #ffffff;
+  background-color: #009933;
+  margin: 5rem 6.5rem 5rem 6.5rem;
+}
+.results{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rem;
+}
+.result{
+  color: black;
+  font-size: 2rem;
+}
