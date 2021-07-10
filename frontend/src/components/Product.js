@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CurrencyFormat from 'react-currency-format';
 
 export default function Product(props) {
     const {product} = props ;
@@ -12,9 +13,9 @@ export default function Product(props) {
                 <Link to={`/product/${product._id}`}>
                     <h2>{product.name}</h2>
                 </Link>
-                <div className="category">{product.category}</div>
-                <div className="price">{product.price} TL</div>       
-                   
+                <div className="product-info">{product.category}</div>
+                <div className="product-info">{product.city}</div>
+                <CurrencyFormat className="price" value={product.price} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>   
             </div>
         </div>
     )

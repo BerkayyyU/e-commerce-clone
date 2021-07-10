@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link} from 'react-router-dom';
 import { detailsProduct } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import CurrencyFormat from 'react-currency-format';
 
 export default function ProductScreen(props) {
     const dispatch = useDispatch();
@@ -25,7 +25,6 @@ export default function ProductScreen(props) {
         <MessageBox variant="danger">{error}</MessageBox>
         ) : (
             <div>
-            <Link to="/">Ana sayfaya geri dön</Link>
             <div className="row top">
                 <div className="col-2">
                     <img className="large" src={product.image} alt={product.name}></img>
@@ -50,7 +49,7 @@ export default function ProductScreen(props) {
                             <li>
                                 <div className="row">
                                     <div>Fiyat</div>
-                                    <div className="price">{product.price} TL</div>
+                                    <CurrencyFormat className="price" value={product.price} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>
                                 </div>
                             </li>
                             <li>

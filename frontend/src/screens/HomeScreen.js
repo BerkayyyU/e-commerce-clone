@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 import { Link, useParams } from 'react-router-dom';
 
+
 export default function HomeScreen(props) {
     const {name = 'all', category = 'all', city = 'all'} = useParams();
     const dispatch = useDispatch();

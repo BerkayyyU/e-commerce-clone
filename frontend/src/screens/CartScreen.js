@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import MessageBox from '../components/MessageBox';
+import CurrencyFormat from 'react-currency-format';
 
 export default function CartScreen(props){
     const productId = props.match.params.id;
@@ -44,7 +45,7 @@ export default function CartScreen(props){
                                     <div className="min-30">
                                         <Link to={`/product/${item.product}`}>{item.name}</Link>
                                     </div>
-                                    <div>{item.price} TL</div>
+                                        <CurrencyFormat className="price" value={item.price} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>
                                     <div>
                                         <button type="button" className="primary block" onClick={()=> removeFromCartHandler(item.product)}>Sil</button>
                                     </div>
@@ -58,7 +59,10 @@ export default function CartScreen(props){
                 <div className="card card-body">
                     <ul>
                         <li>
-                            <h2>Toplam Fiyat : {cartItems.reduce((a, c) => a + c.price,0)} TL</h2> 
+                        <div className="row">
+                            <div><strong> Toplam Fiyat: </strong></div>
+                            <strong><CurrencyFormat className="price" value={cartItems.reduce((a, c) => a + c.price,0)} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat></strong>
+                        </div>
                         </li>
                         <li>
                             <button type="button" onClick={checkoutHandler} className="block-green" disabled={cartItems.lenght===0}>Siparişe Git</button>

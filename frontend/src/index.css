@@ -120,6 +120,8 @@ a.brand{
 }
 .row.top{
   align-items: flex-start;
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 .col-1{
   flex: 1 1 25rem;
@@ -161,10 +163,7 @@ img.large{
 .card-body > *{
   margin-bottom: 0.5rem;
 }
-.category{
-  font-size: 1.5rem;
-}
-.city{
+.product-info{
   font-size: 1.5rem;
   padding-bottom: 0.7rem;
 }

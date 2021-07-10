@@ -6,6 +6,7 @@ import CheckoutSteps from "../components/CheckoutSteps";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants";
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import CurrencyFormat from 'react-currency-format';
 
 export default function PlaceOrderScreen(props){
     const cart = useSelector((state)=> state.cart);
@@ -71,7 +72,7 @@ export default function PlaceOrderScreen(props){
                                     <div className="min-30">
                                         <Link to={`/product/${item.product}`}>{item.name}</Link>
                                     </div>
-                                    <div>{item.price} TL</div>                                  
+                                    <CurrencyFormat className="price" value={item.price} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>                                  
                                 </div>
                             </li>
                         ))}
@@ -89,20 +90,20 @@ export default function PlaceOrderScreen(props){
                             <li>
                                 <div className="row">
                                     <div>Ürünlerin Ücreti</div>
-                                    <div>{cart.itemsPrice.toFixed(2)} TL</div>
+                                    <CurrencyFormat className="price" value={cart.itemsPrice.toFixed(2)} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>
                                 </div>
                             </li>
                             <li>
                                 <div className="row">
                                     <div>Kargo Ücreti</div>
-                                    <div>{cart.shippingPrice.toFixed(2)} TL</div>
+                                    <CurrencyFormat className="price" value={cart.shippingPrice.toFixed(2)} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>
                                 </div>
                             </li>
                             <li>
                                 <div className="row">
                                     <div> <strong> Toplam Fiyat </strong></div>
                                     <div>
-                                        <strong> {cart.totalPrice.toFixed(2)} TL </strong>
+                                        <strong><CurrencyFormat className="price" value={cart.totalPrice.toFixed(2)} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat> </strong>
                                     </div>
                                 </div>
                             </li>
