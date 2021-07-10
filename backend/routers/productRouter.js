@@ -9,9 +9,11 @@ productRouter.get("/", // API FOR ALL PRODUCTS
     expressAsyncHandler(async (req, res) => { // sending list of products to the frontend 
         const name = req.query.name || '';
         const category = req.query.category || '';
+        const city = req.query.city || '';
         const nameFilter = name ? { name: {$regex: name, $options: 'i'} } : {}; // To find if the name "contains" not exactly matches
         const categoryFilter = category ? {category} : {};
-        const products = await Product.find({...nameFilter, ...categoryFilter}); //return all products
+        const cityFilter = city ? {city} : {};
+        const products = await Product.find({...nameFilter, ...categoryFilter, ...cityFilter}); //return all products
         res.send(products);
 }));
 
@@ -19,6 +21,12 @@ productRouter.get('/categories',
     expressAsyncHandler(async (req, res) => {
         const categories = await Product.find().distinct('category'); // Get categories
         res.send(categories);
+}));
+
+productRouter.get('/cities',
+    expressAsyncHandler(async (req, res) => {
+        const cities = await Product.find().distinct('city'); // Get categories
+        res.send(cities);
 }));
 
 productRouter.get("/seed", //create products based on data.products 

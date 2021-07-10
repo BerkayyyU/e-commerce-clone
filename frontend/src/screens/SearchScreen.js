@@ -8,7 +8,7 @@ import MessageBox from "../components/MessageBox";
 import Product from "../components/Product";
 
 export default function SearchScreen(props){
-    const {name = 'all', category = 'all'} = useParams();
+    const {name = 'all', category = 'all', city = 'all'} = useParams();
     const dispatch = useDispatch();
 
     const productList = useSelector((state) => state.productList);
@@ -16,56 +16,74 @@ export default function SearchScreen(props){
 
     const productCategoryList = useSelector((state) => state.productCategoryList);
     const {loading: loadingCategories, error: errorCategories, categories} = productCategoryList;
+    console.log(productCategoryList);
+
+    const productCityList = useSelector((state) => state.productCityList);
+    const {loading: loadingCities, error: errorCities, cities} = productCityList;
+    console.log(productCityList);
 
     useEffect(()=>{
-        dispatch(listProducts({name: name !== 'all' ? name : '', category: category !== 'all' ? category : ''}))
-    }, [category, dispatch, name])
+        dispatch(listProducts({name: name !== 'all' ? name : '', category: category !== 'all' ? category : '', city: city !== 'all' ? city : ''}))
+    }, [category, city, dispatch, name]);
 
     const getFilterUrl = (filter) => {
         const filterCategory = filter.category || category ;
         const filterName = filter.name || name ;
-        return `/search/category/${filterCategory}/name/${filterName}`;
+        const filterCity = filter.city || city;
+        return `/search/category/${filterCategory}/city/${filterCity}/name/${filterName}`;
     };
 
     return (
         <div>
             {loadingCategories ? (
-                        <LoadingBox></LoadingBox>
-                        ) : errorCategories ? (
-                        <MessageBox variant="danger">{error}</MessageBox>
-                        ) : (
-                        <div>
-                            {categories.map(c=>(
-                                <button className={c === category ?  'categories-active' : 'categories'}  key={c}>
-                                    <Link  className="category" to={ getFilterUrl({ category : c })}>{c}</Link>
-                                </button>
-                            ))}
-                        </div>
-                        )}
-
-                    {loading ? (
-                    <LoadingBox></LoadingBox>
-                    ) : error ? (
-                    <MessageBox variant="danger">{error}</MessageBox>
-                    ) : (
-                        <>
-                        {products.length === 0 && (
-                          <MessageBox>No Product Found</MessageBox>
-                        )}
-                        <div className="row center">
-                          {products.map((product) => (
-                            <Product key={product._id} product={product}></Product>
-                          ))}
-                        </div>
-                      </>
-                    )}
-                {loading ? (
-                <LoadingBox></LoadingBox>
-                ) : error ? (
-                <MessageBox variant="danger">{error}</MessageBox>
-                ) : (
-                <div className="results"><p className="result">{products.length} ürün bulundu.</p></div>
+            <LoadingBox></LoadingBox>
+            ) : errorCategories ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+            ) : (
+            <div>
+                {categories.map(ca=>(
+                    <button className={ca === category ?  'categories-active' : 'categories'}  key={ca}>
+                        <Link  className="category" to={ getFilterUrl({ category : ca })}>{ca}</Link>
+                    </button>
+                ))}
+            </div>
+            )}
+            {loadingCities ? (
+            <LoadingBox></LoadingBox>
+            ) : errorCities ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+            ) : (
+            <div>
+                {cities.map(ci=>(
+                    <button className={ci === city ?  'categories-active' : 'categories'}  key={ci}>
+                        <Link  className="category" to={ getFilterUrl({ city : ci })}>{ci}</Link>
+                    </button>
+                ))}
+            </div>
+            )}
+            {loading ? (
+            <LoadingBox></LoadingBox>
+            ) : error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+            ) : (
+                <>
+                {products.length === 0 && (
+                <MessageBox>Ürün bulunamadı!</MessageBox>
                 )}
+                    <div className="row center">
+                        {products.map((product) => (
+                        <Product key={product._id} product={product}></Product>
+                        ))}
+                    </div>
+                </>
+            )}
+            {loading ? (
+            <LoadingBox></LoadingBox>
+            ) : error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+            ) : (
+                <div className="results"><p className="result">{products.length} ürün bulundu.</p></div>
+            )}
         </div>
     )
 }
