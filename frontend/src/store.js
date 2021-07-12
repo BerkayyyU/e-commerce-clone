@@ -2,7 +2,7 @@ import {compose, createStore, applyMiddleware, combineReducers} from "redux";
 import thunk from "redux-thunk";
 // import data from "./data";
 import { cartReducer } from "./reducers/cartReducers";
-import { orderCreateReducer, orderDetailsReducer } from "./reducers/orderReducers";
+import { orderCreateReducer, orderDetailsReducer, orderMineListReducer } from "./reducers/orderReducers";
 import { productCategoryListReducer, productCityListReducer, productDetailsReducer, productListReducer } from "./reducers/productReducers";
 import { userRegisterReducer, userSigninReducer } from "./reducers/userReducers";
 
@@ -33,6 +33,7 @@ const reducer = combineReducers({ // implement reducers
     orderDetails: orderDetailsReducer,
     productCategoryList: productCategoryListReducer,
     productCityList: productCityListReducer,
+    orderMineList: orderMineListReducer,
 });
 
 // const reducer = (state, action) =>{ //Reducer 2 parametre alır state ve action products üzerindeki state değişikliklerini action ile değiştirip data'yı geri döndürür.

@@ -85,6 +85,9 @@ button.primary{
 button.block{
   width: 100%;
 }
+button.small{
+  font-size: 1.2rem;
+}
 button.block-green{
   width: 100%;
   background-color: #009933;
@@ -250,6 +253,7 @@ img.large{
   border-right: none;
   margin-left: 0.5rem;
 }
+
 /*More CSS*/
 .categories{
   color: #ffffff;
@@ -273,4 +277,21 @@ img.large{
 .result{
   color: black;
   font-size: 2rem;
+}
+
+/*Order History Table*/
+.table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.table tbody tr:nth-of-type(odd){
+  background-color: #f4f4f4;
+}
+.table td, .table th{
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+.table button{
+  margin: 0 0.2rem;
 }

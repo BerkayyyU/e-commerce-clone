@@ -19,7 +19,6 @@ export default function HomeScreen(props) {
 
     const productCityList = useSelector((state) => state.productCityList);
     const {loading: loadingCities, error: errorCities, cities} = productCityList;
-    console.log(productCityList);
     
     useEffect(()=>{
         dispatch(listProducts({name: name !== 'all' ? name : '', category: category !== 'all' ? category : '', city: city !== 'all' ? city : ''}))
