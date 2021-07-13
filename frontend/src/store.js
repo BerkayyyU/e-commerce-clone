@@ -4,7 +4,7 @@ import thunk from "redux-thunk";
 import { cartReducer } from "./reducers/cartReducers";
 import { orderCreateReducer, orderDetailsReducer, orderMineListReducer } from "./reducers/orderReducers";
 import { productCategoryListReducer, productCityListReducer, productDetailsReducer, productListReducer } from "./reducers/productReducers";
-import { userRegisterReducer, userSigninReducer } from "./reducers/userReducers";
+import { userDetailsReducer, userRegisterReducer, userSigninReducer } from "./reducers/userReducers";
 
 const initialState = {
     userSignin: {
@@ -34,12 +34,13 @@ const reducer = combineReducers({ // implement reducers
     productCategoryList: productCategoryListReducer,
     productCityList: productCityListReducer,
     orderMineList: orderMineListReducer,
+    userDetails: userDetailsReducer,
 });
 
 // const reducer = (state, action) =>{ //Reducer 2 parametre alır state ve action products üzerindeki state değişikliklerini action ile değiştirip data'yı geri döndürür.
 //     return {products: data.products}; // Redux üzerindeki state'de products görmemizin sebebi bu satırdaki products'ları geri döndürdüğümüz
 
-// }; BU STATİK PRODUCT FROM FRONTEND
+// }; STATIC PRODUCTS FROM FRONTEND
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

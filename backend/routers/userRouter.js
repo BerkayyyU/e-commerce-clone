@@ -50,4 +50,13 @@ userRouter.post("/register",
     })
 );
 
+userRouter.get('/:id', expressAsyncHandler(async(req, res)=> { //For user profile
+    const user = await User.findById(req.params.id);
+    if(user){
+        res.send(user);
+    }else{
+        res.status(404).send({message: 'Kullanıcı bulunamadı! '});
+    }
+}));
+
 export default userRouter;

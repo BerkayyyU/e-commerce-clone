@@ -11,6 +11,7 @@ import OrderScreen from './screens/OrderScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProductScreen from './screens/ProductScreen';
+import ProfileScreen from './screens/ProfileScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import SearchScreen from './screens/SearchScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
@@ -56,6 +57,9 @@ function App() {
                 </Link>
                 <ul className="dropdown-content">
                   <li>
+                    <Link to="/profile">Profil</Link>
+                  </li>
+                  <li>
                     <Link to="/orderhistory">Siparişler</Link>
                   </li>
                   <li>
@@ -84,6 +88,7 @@ function App() {
           <Route path="/search/city/:city/name/:name" component={SearchScreen} exact></Route>
           <Route path="/search/category/:category/city/:city/name/:name" component={SearchScreen} exact></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+          <Route path="/profile" component={ProfileScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center"> Copyright @2021 Berkay Ulguel</footer>
