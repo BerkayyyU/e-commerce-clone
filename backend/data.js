@@ -38,7 +38,7 @@ const data = {
             image:"/images/product-3.jpg",
             price: 780000,
             description: "açıklama3",
-            city:"Edirne"
+            city:"Kastamonu"
         },
         {
             name:"Playstation 5",
@@ -86,7 +86,7 @@ const data = {
             image:"/images/product-9.jpg",
             price: 250,
             description: "açıklama9",
-            city:"Bursa"
+            city:"Aydın"
         },
         {
             name:"MSI Gaming Laptop",
@@ -110,7 +110,7 @@ const data = {
             image:"/images/product-12.jpg",
             price: 345,
             description: "açıklama12",
-            city:"Eskişehir"
+            city:"Rize"
         },
         {
             name:"Prima Bebek Bezi",
@@ -118,7 +118,7 @@ const data = {
             image:"/images/product-13.jpg",
             price: 145,
             description: "açıklama13",
-            city:"Trabzon"
+            city:"Gaziantep"
         },
         {
             name:"Çalışma Masası",
@@ -166,7 +166,7 @@ const data = {
             image:"/images/product-19.jpg",
             price: 1999,
             description: "açıklama19",
-            city:"İstanbul"
+            city:"Gaziantep"
         },
         {
             name:"Süpürge Makinesi",
@@ -182,6 +182,70 @@ const data = {
             image:"/images/product-21.jpg",
             price: 35,
             description: "açıklama21",
+            city:"Edirne"
+        },
+        {
+            name:"JBL Taşınabilir Hoparlör",
+            category:"Film, Kitap ve Müzik",
+            image:"/images/product-22.jpg",
+            price: 347,
+            description: "JBL Go 2 Ipx7 Bluetooth Taşınabilir Hoparlör Bordo",
+            city:"Gaziantep"
+        },
+        {
+            name:"Saç Düzleştirici",
+            category:"Elektronik",
+            image:"/images/product-23.jpg",
+            price: 3999,
+            description: "Dyson Corrale Kablosuz Saç Düzleştirici",
+            city:"Hatay"
+        },
+        {
+            name:"Kazanlı Ütü Sistemi",
+            category:"Elektronik",
+            image:"/images/product-24.jpg",
+            price: 8699,
+            description: "Laurastar System Smart U Buhar Kazanlı Ütü Sistemi Siyah",
+            city:"Kars"
+        },
+        {
+            name:"Waffle Makinesi",
+            category:"Elektronik",
+            image:"/images/product-25.jpg",
+            price: 276,
+            description: "Korkmaz Mia Kırmızı Waffle Makinesi",
+            city:"İstanbul"
+        },
+        {
+            name:"Michael Kors Saat",
+            category:"Moda ve Aksesuar",
+            image:"/images/product-26.jpg",
+            price: 1999,
+            description: "Michael Kors MK5735 Altın Kaplama Kadın Saati",
+            city:"Antalya"
+        },
+        {
+            name:"Çocuk Oto Koltuğu",
+            category:"Bebek ve Çocuk",
+            image:"/images/product-27.jpg",
+            price: 890,
+            description: "Baby2Go Mangofix 360 Derece Dönebilen Yatabilen Isofixli 0-36 Kg Çocuk Oto Koltuğu - Denim Black",
+            city:"Eskişehir"
+        },
+        {
+            name:"Filtre Kahve Makinesi",
+            category:"Elektronik",
+            image:"/images/product-28.jpg",
+            price: 498,
+            description: "Arzum AR3046 Brewtime Filtre Kahve Makinesi - Siyah",
+            city:"Bursa"
+        },
+        {
+            name:"Bebek Sütü",
+            category:"Bebek ve Çocuk",
+            image:"/images/product-29.jpg",
+            price: 414,
+            description: "Golden Goat 1 Keçi Sütü Bazlı Devam Sütü 400 gr - 12'li",
             city:"Edirne"
         }
      ]
