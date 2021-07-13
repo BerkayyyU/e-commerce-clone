@@ -25,7 +25,8 @@ export default function PlaceOrderScreen(props){
     cart.shippingPrice = cart.itemsPrice > 100? toPrice(0) : toPrice(15);
     cart.totalPrice = cart.itemsPrice + cart.shippingPrice;
     const dispatch = useDispatch();
-    const placeOrderHandler = () => {
+    const placeOrderHandler = (e) => {
+        e.preventDefault();
         dispatch(createOrder({...cart, orderItems: cart.cartItems})) // use all cart object and replace cartItems with orderItems
     }
     useEffect(()=>{
@@ -45,20 +46,13 @@ export default function PlaceOrderScreen(props){
                                 <h2>Teslimat Adresi</h2>
                                 <p>
                                     <strong>Ad Soyad:</strong> {cart.shippingAddress.fullName} <br></br>
-                                    <strong>Adres:</strong> {cart.shippingAddress.address},
-                                     {cart.shippingAddress.postalCode}, {cart.shippingAddress.city} / {cart.shippingAddress.country}
-                                    
+                                    <strong>Adres:</strong> {cart.shippingAddress.address} <br></br>
+                                    <strong>Şehir:</strong> {cart.shippingAddress.city} <br></br>
+                                    <strong>Ülke:</strong>  {cart.shippingAddress.country}  <br></br>  
+                                    <strong>Posta Kodu:</strong> {cart.shippingAddress.postalCode} 
                                 </p>
                             </div>
                         </li>
-                         <li>
-                            <div className="card card-body">
-                                <h2>Ödeme Yöntemi</h2>
-                                <p>
-                                    <strong>Method:</strong> {cart.paymentMethod}
-                                </p>
-                            </div>
-                        </li> 
                         <li>
                             <div className="card card-body">
                                 <h2>Ürünler</h2>
@@ -83,6 +77,7 @@ export default function PlaceOrderScreen(props){
                 </div>
                 <div className="col-1">
                     <div className="card card-body">
+                        
                         <ul>
                             <li>
                                 <h2>Sipariş Özeti</h2>
@@ -90,28 +85,50 @@ export default function PlaceOrderScreen(props){
                             <li>
                                 <div className="row">
                                     <div>Ürünlerin Ücreti</div>
-                                    <CurrencyFormat className="price" value={cart.itemsPrice.toFixed(2)} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>
+                                    <CurrencyFormat className="price" value={cart.itemsPrice} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>
                                 </div>
                             </li>
                             <li>
                                 <div className="row">
                                     <div>Kargo Ücreti</div>
-                                    <CurrencyFormat className="price" value={cart.shippingPrice.toFixed(2)} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>
+                                    <CurrencyFormat className="price" value={cart.shippingPrice} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>
                                 </div>
                             </li>
                             <li>
                                 <div className="row">
                                     <div> <strong> Toplam Fiyat </strong></div>
                                     <div>
-                                        <strong><CurrencyFormat className="price" value={cart.totalPrice.toFixed(2)} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat> </strong>
+                                        <strong><CurrencyFormat className="price" value={cart.totalPrice} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat> </strong>
                                     </div>
                                 </div>
                             </li>
+                            <form className="form" onSubmit={placeOrderHandler}>
+                                <div>
+                                    <label htmlFor="cardNo">Kart Numarası:</label> 
+                                    <input type="text" id="cardNo" placeholder="**** **** **** ****" required></input>
+                                </div>
+                                <div>
+                                    <label htmlFor="cardName">Kart Üzerindeki İsim:</label> 
+                                    <input type="text" id="cardName" placeholder="Kart Sahibinin Adı ve Soyadı"  required></input>
+                                </div>
+                                <div>
+                                    <label htmlFor="cardExDate">Son Kullanma Tarihi</label>
+                                    <input type="text" id="cardExDate"  required placeholder="Ay/Yıl"></input>
+                                </div>
+                                <div>
+                                    <label htmlFor="cvc">Güvenlik Kodu</label>
+                                    <input type="text" id="cvc"  required placeholder="CVC/CVV"></input>
+                                </div>
+                                <div>
+                                    <button type="submit" className="primary block-green" disabled={cart.cartItems.length === 0}>Siparişi Tamamla</button>
+                                    {loading && <LoadingBox></LoadingBox> /*Conditional rendering section*/} 
+                                    {error && <MessageBox variant="danger">{error}</MessageBox> /*Conditional rendering section*/}
+                                </div>
+                            </form>
                             <li>
-                                <button type="button" onClick={placeOrderHandler} className="primary block" disabled={cart.cartItems.length === 0}>Siparişi Tamamla</button>
+                                
                             </li>
-                            {loading && <LoadingBox></LoadingBox> /*Conditional rendering section*/} 
-                            {error && <MessageBox variant="danger">{error}</MessageBox> /*Conditional rendering section*/}
+                            
                         </ul>
                     </div>
                 </div>

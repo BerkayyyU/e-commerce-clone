@@ -19,7 +19,7 @@ export default function OrderScreen(props){
         <MessageBox variant="danger">{error}</MessageBox>
         )   :   (
         <div>
-            <h1>Order {order._id}</h1>
+            <h1>Sipariş No: {order._id}</h1>
             <div className="row top">
                 <div className="col-2">
                     <ul>
@@ -32,30 +32,8 @@ export default function OrderScreen(props){
                                      {order.shippingAddress.postalCode}, {order.shippingAddress.city} / {order.shippingAddress.country}
                                     
                                 </p>
-                                {order.isDelivered ? (
-                                <MessageBox variant="success">
-                                    {order.deliveredAt} adresine teslim edildi
-                                </MessageBox>
-                                ) : (
-                                <MessageBox variant="danger">Teslim edilmedi</MessageBox>
-                                )}
                             </div>
                         </li>
-                         <li>
-                            <div className="card card-body">
-                                <h2>Ödeme Yöntemi</h2>
-                                <p>
-                                    <strong>Method:</strong> {order.paymentMethod}
-                                </p>
-                                {order.isPaid ? (
-                                <MessageBox variant="success">
-                                    {order.paidAt} ödeme gerçekleşti
-                                </MessageBox>
-                                ) : (
-                                <MessageBox variant="danger">Ödeme gerçekleşmedi</MessageBox>
-                                )}
-                            </div>
-                        </li> 
                         <li>
                             <div className="card card-body">
                                 <h2>Ürünler</h2>

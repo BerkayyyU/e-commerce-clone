@@ -53,7 +53,7 @@ export default function ProductScreen(props) {
                                 </div>
                             </li>
                             <li>
-                                <button onClick={addToCartHandler} className="primary block-green">Satın Al</button>
+                                <button onClick={addToCartHandler} className="primary block-green">Sepete Ekle</button>
                             </li>
                         </ul>
                     </div>

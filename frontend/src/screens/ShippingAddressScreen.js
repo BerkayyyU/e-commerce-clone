@@ -29,8 +29,6 @@ export default function ShippingAddressScreen(props){
             <CheckoutSteps step1 step2 ></CheckoutSteps> 
             <form className="form" onSubmit={submitHandler}>
                 <div>
-                </div>
-                <div>
                     <label htmlFor="fullName">Ad Soyad:</label>
                     <input type="text" id="fullName"  value={fullName} onChange={(e)=> setFullName(e.target.value)} required></input>
                 </div>

@@ -38,7 +38,7 @@ function App() {
       <div className="grid-container">
         <header className="row">
           <div>
-            <Link className="brand" to="/">E-Commerce</Link>
+            <Link className="brand" to="/">E-Ticaret</Link>
           </div>
           <div>
             <Route render={({history}) => ( <SearchBox history={history}></SearchBox>/*Pass react router dom properties to the search box using render function */)}></Route> 
@@ -52,11 +52,11 @@ function App() {
             {userInfo ? (
                 <div className="dropdown">
                 <Link to="#">
-                  {userInfo.name} <i className="fa fa-caret-down"></i>{" "}
+                  {userInfo.name}{" "}
                 </Link>
                 <ul className="dropdown-content">
                   <li>
-                    <Link to="/orderhistory">Order History</Link>
+                    <Link to="/orderhistory">Siparişler</Link>
                   </li>
                   <li>
                     <Link to="#signout" onClick={signoutHandler}>Çıkış Yap</Link>

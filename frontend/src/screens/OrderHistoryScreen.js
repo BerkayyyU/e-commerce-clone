@@ -14,7 +14,7 @@ export default function OrderHistoryScreen(props) {
   }, [dispatch]);
   return (
     <div>
-      <h1>Order History</h1>
+      <h1>Sipariş Geçmişi</h1>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
@@ -23,10 +23,10 @@ export default function OrderHistoryScreen(props) {
         <table className="table">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>DATE</th>
-              <th>TOTAL</th>
-              <th>ACTIONS</th>
+              <th>Sipariş No</th>
+              <th>Tarih</th>
+              <th>Fiyat</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -43,7 +43,7 @@ export default function OrderHistoryScreen(props) {
                       props.history.push(`/order/${order._id}`);
                     }}
                   >
-                    Details
+                    Sipariş Detayı
                   </button>
                 </td>
               </tr>
