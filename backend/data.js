@@ -86,7 +86,7 @@ const data = {
             image:"/images/product-9.jpg",
             price: 250,
             description: "açıklama9",
-            city:"Aydın"
+            city:"Afyonkarahisar"
         },
         {
             name:"MSI Gaming Laptop",
@@ -110,7 +110,7 @@ const data = {
             image:"/images/product-12.jpg",
             price: 345,
             description: "açıklama12",
-            city:"Rize"
+            city:"Kahramanmaraş"
         },
         {
             name:"Prima Bebek Bezi",
@@ -198,7 +198,7 @@ const data = {
             image:"/images/product-23.jpg",
             price: 3999,
             description: "Dyson Corrale Kablosuz Saç Düzleştirici",
-            city:"Hatay"
+            city:"Edirne"
         },
         {
             name:"Kazanlı Ütü Sistemi",
@@ -206,7 +206,7 @@ const data = {
             image:"/images/product-24.jpg",
             price: 8699,
             description: "Laurastar System Smart U Buhar Kazanlı Ütü Sistemi Siyah",
-            city:"Kars"
+            city:"Kırklareli"
         },
         {
             name:"Waffle Makinesi",
@@ -247,6 +247,94 @@ const data = {
             price: 414,
             description: "Golden Goat 1 Keçi Sütü Bazlı Devam Sütü 400 gr - 12'li",
             city:"Edirne"
+        },
+        {
+            name:"Era Şapka",
+            category:"Moda ve Aksesuar",
+            image:"/images/product-30.jpg",
+            price: 319,
+            description: "New ERA 9forty Kadın Yavru Ağzı Şapka",
+            city:"Afyonkarahisar"
+        },
+        {
+            name:"Guess Cüzdan",
+            category:"Moda ve Aksesuar",
+            image:"/images/product-31.jpg",
+            price: 694,
+            description: "Guess Deri Cüzdan, Standart, Kırmızı",
+            city:"Antalya"
+        },
+        {
+            name:"Vans Sneaker",
+            category:"Moda ve Aksesuar",
+            image:"/images/product-32.jpg",
+            price: 673,
+            description: "Vans MY WARD PLATFORM Siyah Kadın Sneaker Ayakkabı",
+            city:"Kırklareli"
+        },
+        {
+            name:"Puma Sweatshirt",
+            category:"Moda ve Aksesuar",
+            image:"/images/product-33.jpg",
+            price: 265,
+            description: "Puma Kadın Siyah Rtg Pamuklu Fermuarlı Sweatshirt",
+            city:"Kastamonu"
+        },
+        {
+            name:"Oysho Spor Çantası",
+            category:"Moda ve Aksesuar",
+            image:"/images/product-34.jpeg",
+            price: 299,
+            description: "Oysho Kadın Koyu Pembe Askıları Logolu Spor Çantası",
+            city:"Sivas"
+        },
+        {
+            name:"Feder Ya Paragöz Koca",
+            category:"Film, Kitap ve Müzik",
+            image:"/images/product-35.png",
+            price: 40,
+            description: "İş Bankası Kültür Yayınları Feder Ya Da Paragöz Koca",
+            city:"Trabzon"
+        },
+        {
+            name:"Mahkumun Son Günü",
+            category:"Film, Kitap ve Müzik",
+            image:"/images/product-36.png",
+            price: 8.50,
+            description: "İş Bankası Kültür Yayınları Bir İdam Mahkumunun Son Günü (Karton Kapak)",
+            city:"Sivas"
+        },
+        {
+            name:"Marvel Thor",
+            category:"Film, Kitap ve Müzik",
+            image:"/images/product-37.jpg",
+            price: 8.50,
+            description: "MARVEL Thor (blu-ray Disc)",
+            city:"Kahramanmaraş"
+        },
+        {
+            name:"Hisar Tencere Seti",
+            category:"Ev ve Bahçe",
+            image:"/images/product-38.jpg",
+            price: 695,
+            description: "Hisar 68162 Milas Kırmızı 8 Parça Tencere Seti",
+            city:"İstanbul"
+        },
+        {
+            name:"Everc Şelale",
+            category:"Ev ve Bahçe",
+            image:"/images/product-39.jpg",
+            price: 8399,
+            description: "Everc Led Işıklı Yapay Bahçe Şelale",
+            city:"Sivas"
+        },
+        {
+            name:"Nevresim Takımı",
+            category:"Ev ve Bahçe",
+            image:"/images/product-41.jpg",
+            price: 449,
+            description: "Karaca Home Vella Yeşil Rnf Nevresim Takımı Jakar Battaniye Seti",
+            city:"Ankara"
         }
      ]
 };

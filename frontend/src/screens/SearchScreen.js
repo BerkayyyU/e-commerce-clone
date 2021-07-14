@@ -35,32 +35,34 @@ export default function SearchScreen(props){
 
     return (
         <div>
-            {loadingCategories ? (
-            <LoadingBox></LoadingBox>
-            ) : errorCategories ? (
-            <MessageBox variant="danger">{error}</MessageBox>
-            ) : (
-            <div>
-                {categories.map(ca=>(
-                    <button className={ca === category ?  'categories-active' : 'categories'}  key={ca}>
-                        <Link  className="category" to={ getFilterUrl({ category : ca })}>{ca}</Link>
-                    </button>
-                ))}
+            <div className="col-1">
+                {loadingCategories ? (
+                <LoadingBox></LoadingBox>
+                ) : errorCategories ? (
+                <MessageBox variant="danger">{error}</MessageBox>
+                ) : (
+                <div>
+                    {categories.map(ca=>(
+                        <button className={ca === category ?  'categories-active' : 'categories'}  key={ca}>
+                            <Link  className="category" to={ getFilterUrl({ category : ca })}>{ca}</Link>
+                        </button>
+                    ))}
+                </div>
+                )}
+                {loadingCities ? (
+                <LoadingBox></LoadingBox>
+                ) : errorCities ? (
+                <MessageBox variant="danger">{error}</MessageBox>
+                ) : (
+                <div>
+                    {cities.map(ci=>(
+                        <button className={ci === city ?  'categories-active' : 'categories'}  key={ci}>
+                            <Link  className="category" to={ getFilterUrl({ city : ci })}>{ci}</Link>
+                        </button>
+                    ))}
+                </div>
+                )}
             </div>
-            )}
-            {loadingCities ? (
-            <LoadingBox></LoadingBox>
-            ) : errorCities ? (
-            <MessageBox variant="danger">{error}</MessageBox>
-            ) : (
-            <div>
-                {cities.map(ci=>(
-                    <button className={ci === city ?  'categories-active' : 'categories'}  key={ci}>
-                        <Link  className="category" to={ getFilterUrl({ city : ci })}>{ci}</Link>
-                    </button>
-                ))}
-            </div>
-            )}
             {loading ? (
             <LoadingBox></LoadingBox>
             ) : error ? (
