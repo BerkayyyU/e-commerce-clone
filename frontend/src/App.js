@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import { listProductCategories, listProductCities } from './actions/productActions';
 import { signout } from './actions/userActions';
+import PrivateRoute from './components/PrivateRoute';
 import SearchBox from './components/SearchBox';
 import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen';
@@ -88,7 +89,7 @@ function App() {
           <Route path="/search/city/:city/name/:name" component={SearchScreen} exact></Route>
           <Route path="/search/category/:category/city/:city/name/:name" component={SearchScreen} exact></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
-          <Route path="/profile" component={ProfileScreen}></Route>
+          <PrivateRoute path="/profile" component={ProfileScreen}></PrivateRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center"> Copyright @2021 Berkay Ulguel</footer>

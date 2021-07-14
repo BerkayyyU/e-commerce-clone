@@ -4,7 +4,7 @@ import thunk from "redux-thunk";
 import { cartReducer } from "./reducers/cartReducers";
 import { orderCreateReducer, orderDetailsReducer, orderMineListReducer } from "./reducers/orderReducers";
 import { productCategoryListReducer, productCityListReducer, productDetailsReducer, productListReducer } from "./reducers/productReducers";
-import { userDetailsReducer, userRegisterReducer, userSigninReducer } from "./reducers/userReducers";
+import { userDetailsReducer, userRegisterReducer, userSigninReducer, userUpdateProfileReducer } from "./reducers/userReducers";
 
 const initialState = {
     userSignin: {
@@ -35,6 +35,7 @@ const reducer = combineReducers({ // implement reducers
     productCityList: productCityListReducer,
     orderMineList: orderMineListReducer,
     userDetails: userDetailsReducer,
+    userUpdateProfile: userUpdateProfileReducer,
 });
 
 // const reducer = (state, action) =>{ //Reducer 2 parametre alır state ve action products üzerindeki state değişikliklerini action ile değiştirip data'yı geri döndürür.

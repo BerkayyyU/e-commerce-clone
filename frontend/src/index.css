@@ -191,6 +191,9 @@ img.large{
   color: #a02020;
   background-color: #ffe0e0e0;
 }
+.success {
+  color: #20a020;
+}
 
 /* Form */
 .form{
