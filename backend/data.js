@@ -185,7 +185,7 @@ const data = {
             city:"Edirne"
         },
         {
-            name:"JBL Taşınabilir Hoparlör",
+            name:"JBL Hoparlör",
             category:"Film, Kitap ve Müzik",
             image:"/images/product-22.jpg",
             price: 347,
@@ -289,7 +289,7 @@ const data = {
             city:"Sivas"
         },
         {
-            name:"Feder Ya Paragöz Koca",
+            name:"Feder Paragöz Koca",
             category:"Film, Kitap ve Müzik",
             image:"/images/product-35.png",
             price: 40,
@@ -299,7 +299,7 @@ const data = {
         {
             name:"Mahkumun Son Günü",
             category:"Film, Kitap ve Müzik",
-            image:"/images/product-36.png",
+            image:"/images/product-36.jpeg",
             price: 8.50,
             description: "İş Bankası Kültür Yayınları Bir İdam Mahkumunun Son Günü (Karton Kapak)",
             city:"Sivas"

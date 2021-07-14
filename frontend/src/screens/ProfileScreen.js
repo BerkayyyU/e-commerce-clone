@@ -41,8 +41,8 @@ export default function ProfileScreen(){
     return (
         <div>
             <form className="form" onSubmit={submitHandler}>
-                <div>
-                    <h1>Kullanıcı Profili</h1>
+                <div className="headers-center">
+                    <h1 className="headers">Kullanıcı Profili</h1>
                 </div>
                     {loading ? (
                     <LoadingBox></LoadingBox>
@@ -50,28 +50,31 @@ export default function ProfileScreen(){
                     <MessageBox variant="danger">{error}</MessageBox>
                     ) :
                     <>
-                    {loadingUpdate && <LoadingBox></LoadingBox>}
-                    {errorUpdate && (<MessageBox variant="danger">{error}</MessageBox>)}
-                    {successUpdate && <MessageBox variant="success">Kullanıcı Profili Güncellendi</MessageBox>}
+                    
                         <div>
-                            <label htmlFor="name">Kullanıcı Adı</label>
+                            <label htmlFor="name">Kullanıcı Adı:</label>
                             <input id="name" type="text" placeholder="Kullanıcı Adı giriniz" value={name} onChange={(e)=> setName(e.target.value)}></input>
                         </div>
                         <div>
-                            <label htmlFor="email">Email</label>
+                            <label htmlFor="email">Email:</label>
                             <input id="email" type="text" placeholder="Email giriniz" value={email} onChange={(e)=> setEmail(e.target.value)}></input>
                         </div>
                         <div>
-                            <label htmlFor="password">Şifre</label>
+                            <label htmlFor="password">Şifre:</label>
                             <input id="password" type="text" placeholder="Şifre giriniz" onChange={(e) => setPassword(e.target.value)}></input>
                         </div>
                         <div>
-                            <label htmlFor="confirmPassword">Şifreyi Onayla</label>
+                            <label htmlFor="confirmPassword">Şifreyi Onayla:</label>
                             <input id="confirmPassword" type="text" placeholder="Şifreyi tekrardan giriniz" onChange={(e) => setconfirmPassword(e.target.value)}></input>
                         </div>
                         <div>
                             <label></label>
                             <button className="block-green" type="submit">Güncelle</button>
+                        </div>
+                        <div className="headers-center">
+                            {loadingUpdate && <LoadingBox></LoadingBox>}
+                            {errorUpdate && (<MessageBox variant="danger">{error}</MessageBox>)}
+                            {successUpdate && <MessageBox variant="success">Kullanıcı Profili Güncellendi!</MessageBox>}
                         </div>
                     </>
                 }

@@ -32,14 +32,15 @@ export default function ProductScreen(props) {
                 <div className="col-1">
                     <ul>
                         <li>
-                            <h1>{product.name}</h1>
+                            <div className="headers-center">
+                                <h1 className="headers">{product.name}</h1>
+                            </div>
                         </li>
                         <li>
-                            <h4>Açıklama:</h4>
-                        <p>{product.description}</p>
+                            <h1>Açıklama:</h1>{product.description}
                         </li>
                         <li>
-                            <h4>Şehir:</h4> {product.city}
+                            <h1>Şehir:</h1> {product.city}
                         </li>
                     </ul>
                 </div>

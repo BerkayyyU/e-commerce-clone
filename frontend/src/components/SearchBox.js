@@ -11,7 +11,7 @@ export default function SearchBox(props){
         <form className="search" onSubmit={submitHandler}>
             <div className="row">
                 <input type="text" name="q" id="q" onChange={(e)=> setName(e.target.value)}></input>
-                <button className="primary" type="submit">Ara</button>
+                <button className="primary-green" type="submit">Ara</button>
             </div>
         </form>
     )

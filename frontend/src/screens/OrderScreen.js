@@ -19,39 +19,46 @@ export default function OrderScreen(props){
         <MessageBox variant="danger">{error}</MessageBox>
         )   :   (
         <div>
-            <h1>Sipariş No: {order._id}</h1>
+            <div className="headers-center">
+                <h1 className="headers">Sipariş No: {order._id}</h1>
+            </div>
             <div className="row top">
                 <div className="col-2">
                     <ul>
                         <li>
                             <div className="card card-body">
-                                <h2>Teslimat Adresi</h2>
+                                <div className="headers-center">
+                                    <h1 className="headers-small">Teslimat Adresi</h1>
+                                </div>
                                 <p>
-                                    <strong>Ad Soyad:</strong> {order.shippingAddress.fullName} <br></br>
-                                    <strong>Adres:</strong> {order.shippingAddress.address},
-                                     {order.shippingAddress.postalCode}, {order.shippingAddress.city} / {order.shippingAddress.country}
-                                    
+                                    <strong>Ad Soyad:</strong> {order.shippingAddress.fullName} <br></br><br></br>
+                                    <strong>Adres:</strong> {order.shippingAddress.address} <br></br><br></br>
+                                    <strong>Şehir:</strong> {order.shippingAddress.city} <br></br><br></br>
+                                    <strong>Ülke:</strong>  {order.shippingAddress.country}  <br></br><br></br>
+                                    <strong>Posta Kodu:</strong> {order.shippingAddress.postalCode} 
                                 </p>
                             </div>
                         </li>
                         <li>
                             <div className="card card-body">
-                                <h2>Ürünler</h2>
-                                <ul>
-                        {order.orderItems.map((item)=>(
-                            <li key={item.product}>
-                                <div className="row">
-                                    <div>
-                                        <img src = {item.image} alt = {item.name} className="small"></img>
-                                    </div>
-                                    <div className="min-30">
-                                        <Link to={`/product/${item.product}`}>{item.name}</Link>
-                                    </div>
-                                    <div>{item.price} TL</div>                                  
+                                <div className="headers-center">
+                                    <h1 className="headers-small">Ürünler</h1>
                                 </div>
-                            </li>
-                        ))}
-                    </ul>
+                                <ul>
+                                    {order.orderItems.map((item)=>(
+                                        <li key={item.product}>
+                                            <div className="row">
+                                                <div>
+                                                    <img src = {item.image} alt = {item.name} className="small"></img>
+                                                </div>
+                                                <div className="min-30">
+                                                    <Link to={`/product/${item.product}`}>{item.name}</Link>
+                                                </div>
+                                                <div>{item.price} TL</div>                                  
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </li>
                     </ul>
@@ -60,7 +67,9 @@ export default function OrderScreen(props){
                     <div className="card card-body">
                         <ul>
                             <li>
-                                <h2>Sipariş Özeti</h2>
+                                <div className="headers-center">
+                                    <h1 className="headers-small">Sipariş Özeti</h1>
+                                </div>
                             </li>
                             <li>
                                 <div className="row">
@@ -82,6 +91,9 @@ export default function OrderScreen(props){
                                     </div>
                                 </div>
                             </li>
+                            <div className="headers-center">
+                                <MessageBox variant="success">Satın Alım Başarıyla Gerçekleşti!</MessageBox>
+                            </div>
                         </ul>
                     </div>
                 </div>

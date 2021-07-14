@@ -36,8 +36,8 @@ export default function RegisterScreen(props){
     return (
         <div>
             <form className="form" onSubmit={submitHandler}>
-                <div>
-                    <h1>Kayıt Ol</h1>
+                <div className="headers-center">
+                    <h1 className="headers">Kayıt Ol</h1>
                 </div>
                 {loading && <LoadingBox></LoadingBox>}
                 {error && <MessageBox variant="danger">{error}</MessageBox>} 
@@ -59,12 +59,12 @@ export default function RegisterScreen(props){
                 </div>
                 <div>
                     <label></label>
-                    <button className="primary" type="submit">Kayıt Ol</button>
+                    <button className="block-green" type="submit">Kayıt Ol</button>
                 </div>
                 <div>
                     <label></label>
                     <div>
-                        Hesabınız var mı? <Link to={`/signin?redirect=${redirect}`}>Giriş Yap</Link>
+                        Hesabınız var mı? <Link to={`/signin?redirect=${redirect}`}>Giriş Yapın</Link>
                     </div>
                 </div>
             </form>

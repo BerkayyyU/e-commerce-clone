@@ -43,41 +43,44 @@ export default function PlaceOrderScreen(props){
                     <ul>
                         <li>
                             <div className="card card-body">
-                                <h2>Teslimat Adresi</h2>
+                            <div className="headers-center">
+                                <h1 className="headers-small">Teslimat Adresi</h1>
+                            </div>
                                 <p>
-                                    <strong>Ad Soyad:</strong> {cart.shippingAddress.fullName} <br></br>
-                                    <strong>Adres:</strong> {cart.shippingAddress.address} <br></br>
-                                    <strong>Şehir:</strong> {cart.shippingAddress.city} <br></br>
-                                    <strong>Ülke:</strong>  {cart.shippingAddress.country}  <br></br>  
+                                    <strong>Ad Soyad:</strong> {cart.shippingAddress.fullName} <br></br><br></br>
+                                    <strong>Adres:</strong> {cart.shippingAddress.address} <br></br><br></br>
+                                    <strong>Şehir:</strong> {cart.shippingAddress.city} <br></br><br></br>
+                                    <strong>Ülke:</strong>  {cart.shippingAddress.country}  <br></br><br></br>
                                     <strong>Posta Kodu:</strong> {cart.shippingAddress.postalCode} 
                                 </p>
                             </div>
                         </li>
                         <li>
                             <div className="card card-body">
-                                <h2>Ürünler</h2>
-                                <ul>
-                        {cart.cartItems.map((item)=>(
-                            <li key={item.product}>
-                                <div className="row">
-                                    <div>
-                                        <img src = {item.image} alt = {item.name} className="small"></img>
-                                    </div>
-                                    <div className="min-30">
-                                        <Link to={`/product/${item.product}`}>{item.name}</Link>
-                                    </div>
-                                    <CurrencyFormat className="price" value={item.price} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>                                  
+                                <div className="headers-center">
+                                    <h1 className="headers-small">Ürünler</h1>
                                 </div>
-                            </li>
-                        ))}
-                    </ul>
+                                <ul>
+                                {cart.cartItems.map((item)=>(
+                                    <li key={item.product}>
+                                        <div className="row">
+                                            <div>
+                                                <img src = {item.image} alt = {item.name} className="small"></img>
+                                            </div>
+                                            <div className="min-30">
+                                                <Link to={`/product/${item.product}`}>{item.name}</Link>
+                                            </div>
+                                            <CurrencyFormat className="price" value={item.price} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat>                                  
+                                        </div>
+                                    </li>
+                                ))}
+                                </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div className="col-1">
                     <div className="card card-body">
-                        
                         <ul>
                             <li>
                                 <h2>Sipariş Özeti</h2>
@@ -125,10 +128,6 @@ export default function PlaceOrderScreen(props){
                                     {error && <MessageBox variant="danger">{error}</MessageBox> /*Conditional rendering section*/}
                                 </div>
                             </form>
-                            <li>
-                                
-                            </li>
-                            
                         </ul>
                     </div>
                 </div>

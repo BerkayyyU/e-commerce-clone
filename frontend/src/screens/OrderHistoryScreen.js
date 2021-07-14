@@ -14,42 +14,47 @@ export default function OrderHistoryScreen(props) {
   }, [dispatch]);
   return (
     <div>
-      <h1>Sipariş Geçmişi</h1>
+      <div className="headers-center">
+        <h1 className="headers">Sipariş Geçmişi</h1>
+      </div>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Sipariş No</th>
-              <th>Tarih</th>
-              <th>Fiyat</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {orders.map((order) => (
-              <tr key={order._id}>
-                <td>{order._id}</td>
-                <td>{order.createdAt.substring(0, 10)}</td>
-                <td><CurrencyFormat value={order.totalPrice} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat></td>
-                <td>
-                  <button
-                    type="button"
-                    className="small"
-                    onClick={() => {
-                      props.history.push(`/order/${order._id}`);
-                    }}
-                  >
-                    Sipariş Detayı
-                  </button>
-                </td>
+        <div className="headers-center">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Sipariş No</th>
+                <th>Tarih</th>
+                <th>Fiyat</th>
+                <th></th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {orders.map((order) => (
+                <tr key={order._id}>
+                  <td>{order._id}</td>
+                  <td>{order.createdAt.substring(0, 10)}</td>
+                  <td><CurrencyFormat value={order.totalPrice} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat></td>
+                  <td>
+                    <button
+                      type="button"
+                      className="primary small"
+                      onClick={() => {
+                        props.history.push(`/order/${order._id}`);
+                      }}
+                    >
+                      Sipariş Detayı
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        
       )}
     </div>
   );

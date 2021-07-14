@@ -29,7 +29,9 @@ export default function CartScreen(props){
     return (
         <div className="row top">
             <div className="col-2">
-                <h1>Sepet</h1>
+                <div className="headers-center">
+                    <h1 className="headers">Sepet</h1>
+                </div>
                 {cartItems.lenght === 0 ? (
                 <MessageBox>
                     Sepetiniz boş. <Link to="/">Ana sayfaya dönün</Link>

@@ -30,8 +30,8 @@ export default function SigninScreen(props){
     return (
         <div>
             <form className="form" onSubmit={submitHandler}>
-                <div>
-                    <h1>Giriş Yap</h1>
+                <div className="headers-center">
+                    <h1 className="headers">Giriş Yap</h1>
                 </div>
                 {loading && <LoadingBox></LoadingBox>}
                 {error && <MessageBox variant="danger">{error}</MessageBox>} 
@@ -45,7 +45,7 @@ export default function SigninScreen(props){
                 </div>
                 <div>
                     <label></label>
-                    <button className="primary" type="submit">Giriş Yap</button>
+                    <button className="block-green" type="submit">Giriş Yap</button>
                 </div>
                 <div>
                     <label></label>

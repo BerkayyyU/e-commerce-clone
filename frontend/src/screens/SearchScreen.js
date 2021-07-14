@@ -36,6 +36,9 @@ export default function SearchScreen(props){
     return (
         <div>
             <div className="col-1">
+                <div className="headers-center">
+                    <h1 className="headers">Kategoriler</h1>
+                </div>
                 {loadingCategories ? (
                 <LoadingBox></LoadingBox>
                 ) : errorCategories ? (
@@ -43,12 +46,15 @@ export default function SearchScreen(props){
                 ) : (
                 <div>
                     {categories.map(ca=>(
-                        <button className={ca === category ?  'categories-active' : 'categories'}  key={ca}>
-                            <Link  className="category" to={ getFilterUrl({ category : ca })}>{ca}</Link>
+                        <button className={ca === category ?  'categories-cities-active' : 'categories-cities'}  key={ca}>
+                            <Link  className="category-city" to={ getFilterUrl({ category : ca })}>{ca}</Link>
                         </button>
                     ))}
                 </div>
                 )}
+                <div className="headers-center">
+                    <h1 className="headers">Şehirler</h1>
+                </div>
                 {loadingCities ? (
                 <LoadingBox></LoadingBox>
                 ) : errorCities ? (
@@ -56,8 +62,8 @@ export default function SearchScreen(props){
                 ) : (
                 <div>
                     {cities.map(ci=>(
-                        <button className={ci === city ?  'categories-active' : 'categories'}  key={ci}>
-                            <Link  className="category" to={ getFilterUrl({ city : ci })}>{ci}</Link>
+                        <button className={ci === city ?  'categories-cities-active' : 'categories-cities'}  key={ci}>
+                            <Link  className="category-city" to={ getFilterUrl({ city : ci })}>{ci}</Link>
                         </button>
                     ))}
                 </div>
