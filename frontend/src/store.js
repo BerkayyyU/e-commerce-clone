@@ -18,8 +18,7 @@ const initialState = {
         : [], 
         shippingAddress: localStorage.getItem("shippingAddress") // Check the user shipping address and if it exists automatically fill it for the next ones.
         ? JSON.parse(localStorage.getItem("shippingAddress"))
-        : {}, // 
-        paymentMethod: "PayPal",
+        : {}
     },
 };
 
