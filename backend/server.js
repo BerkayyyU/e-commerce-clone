@@ -35,10 +35,6 @@ app.use('/api/orders', orderRouter);
 //     res.send(data.products);
 // });
 
-app.get('/', (req, res) => {
-  res.send('Server hazır');
-});
-
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '/frontend/build'))); // serve all files inside the frontend build folder as a static files
 app.get('*', (req, res) => {
