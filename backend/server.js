@@ -12,11 +12,8 @@ const app = express();
 app.use(express.json()); // parsing json data in the body of request
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/e-commerce', {
+mongoose.connect(process.env.MONGODB_URI, {
   // To connect with mongodb database. If MONGODB_URL exists use it otherwise use the other one.
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
 });
 
 // app.get('/api/products/:id', (req, res)=>{
