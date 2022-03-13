@@ -1,11 +1,12 @@
 {
-  "name": "e-commerce",
+  "name": "y",
   "type": "module",
   "version": "1.0.0",
-  "description": "",
+  "description": "e-commerce clone website",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +23,13 @@
     "eslint": "^7.23.0",
     "eslint-plugin-react": "^7.23.1",
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BerkayyyU/Ecommerce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BerkayyyU/Ecommerce/issues"
+  },
+  "homepage": "https://github.com/BerkayyyU/Ecommerce#readme"
 }

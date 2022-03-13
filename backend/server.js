@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import productRouter from './routers/productRouter.js';
@@ -41,6 +42,12 @@ app.get('/', (req, res) => {
   res.send('Server hazır');
 });
 
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/frontend/build'))); // serve all files inside the frontend build folder as a static files
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/frontend/build/index.html')); // Everything that user enter after the website, domain  or server name is going to be served by index.html file
+});
+
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message }); // error wil be directed to this function from userRouter expressasynchandler and the same error wil be send back to frontend
 });
@@ -49,3 +56,5 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Serve at http://localhost:${port}`);
 });
+
+// "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
