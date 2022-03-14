@@ -1,1 +1,749 @@
-[{"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\index.js":"1","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reportWebVitals.js":"2","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\App.js":"3","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\store.js":"4","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\productActions.js":"5","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\userActions.js":"6","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\PrivateRoute.js":"7","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\SearchBox.js":"8","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\OrderHistoryScreen.js":"9","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\CartScreen.js":"10","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\OrderScreen.js":"11","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ProfileScreen.js":"12","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\RegisterScreen.js":"13","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\SearchScreen.js":"14","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ProductScreen.js":"15","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ShippingAddressScreen.js":"16","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\PlaceOrderScreen.js":"17","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\HomeScreen.js":"18","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\cartReducers.js":"19","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\orderReducers.js":"20","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\SigninScreen.js":"21","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\productReducers.js":"22","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\userReducers.js":"23","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\cartActions.js":"24","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\LoadingBox.js":"25","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\MessageBox.js":"26","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\orderActions.js":"27","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\Product.js":"28","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\CheckoutSteps.js":"29","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\userConstants.js":"30","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\cartConstants.js":"31","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\productConstants.js":"32","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\orderConstants.js":"33"},{"size":698,"mtime":1647087858936,"results":"34","hashOfConfig":"35"},{"size":375,"mtime":1647087858938,"results":"36","hashOfConfig":"35"},{"size":7021,"mtime":1647291686197,"results":"37","hashOfConfig":"35"},{"size":2425,"mtime":1647087858943,"results":"38","hashOfConfig":"35"},{"size":2115,"mtime":1647087858929,"results":"39","hashOfConfig":"35"},{"size":3625,"mtime":1647087858930,"results":"40","hashOfConfig":"35"},{"size":544,"mtime":1647282612917,"results":"41","hashOfConfig":"35"},{"size":622,"mtime":1647282602358,"results":"42","hashOfConfig":"35"},{"size":2186,"mtime":1647283486749,"results":"43","hashOfConfig":"35"},{"size":3568,"mtime":1647282035498,"results":"44","hashOfConfig":"35"},{"size":4244,"mtime":1647282951602,"results":"45","hashOfConfig":"35"},{"size":3773,"mtime":1647284159441,"results":"46","hashOfConfig":"35"},{"size":3153,"mtime":1647283916631,"results":"47","hashOfConfig":"35"},{"size":4021,"mtime":1647289707308,"results":"48","hashOfConfig":"35"},{"size":2672,"mtime":1647283544393,"results":"49","hashOfConfig":"35"},{"size":3148,"mtime":1647281790573,"results":"50","hashOfConfig":"35"},{"size":7254,"mtime":1647282582212,"results":"51","hashOfConfig":"35"},{"size":3359,"mtime":1647287456172,"results":"52","hashOfConfig":"35"},{"size":1563,"mtime":1647087858936,"results":"53","hashOfConfig":"35"},{"size":1605,"mtime":1647087858937,"results":"54","hashOfConfig":"35"},{"size":2497,"mtime":1647284198153,"results":"55","hashOfConfig":"35"},{"size":2363,"mtime":1647087858937,"results":"56","hashOfConfig":"35"},{"size":2528,"mtime":1647087858938,"results":"57","hashOfConfig":"35"},{"size":1322,"mtime":1647287456170,"results":"58","hashOfConfig":"35"},{"size":126,"mtime":1647282621678,"results":"59","hashOfConfig":"35"},{"size":211,"mtime":1647087858931,"results":"60","hashOfConfig":"35"},{"size":2560,"mtime":1647087858929,"results":"61","hashOfConfig":"35"},{"size":889,"mtime":1647282028491,"results":"62","hashOfConfig":"35"},{"size":359,"mtime":1647282574944,"results":"63","hashOfConfig":"35"},{"size":874,"mtime":1647087858935,"results":"64","hashOfConfig":"35"},{"size":212,"mtime":1647087858933,"results":"65","hashOfConfig":"35"},{"size":820,"mtime":1647087858934,"results":"66","hashOfConfig":"35"},{"size":614,"mtime":1647087858934,"results":"67","hashOfConfig":"35"},{"filePath":"68","messages":"69","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},"1i0ctt6",{"filePath":"71","messages":"72","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"73","messages":"74","errorCount":0,"warningCount":2,"fixableErrorCount":0,"fixableWarningCount":0,"source":null},{"filePath":"75","messages":"76","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"77","messages":"78","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"79","messages":"80","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"81","messages":"82","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"83","messages":"84","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"85","messages":"86","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"87","messages":"88","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"89","messages":"90","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"91","messages":"92","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"93","messages":"94","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"95","messages":"96","errorCount":0,"warningCount":8,"fixableErrorCount":0,"fixableWarningCount":0,"source":"97","usedDeprecatedRules":"70"},{"filePath":"98","messages":"99","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"100","messages":"101","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"102","messages":"103","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"104","messages":"105","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"106","messages":"107","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"108","messages":"109","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"110","messages":"111","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"112","messages":"113","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"114","messages":"115","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"116","messages":"117","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"118","messages":"119","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"120","messages":"121","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"122","messages":"123","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"124","messages":"125","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"126","messages":"127","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"128","messages":"129","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"130","messages":"131","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"132","messages":"133","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},{"filePath":"134","messages":"135","errorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":"70"},"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\index.js",[],["136","137"],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reportWebVitals.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\App.js",["138","139"],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\store.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\productActions.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\userActions.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\PrivateRoute.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\SearchBox.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\OrderHistoryScreen.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\CartScreen.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\OrderScreen.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ProfileScreen.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\RegisterScreen.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\SearchScreen.js",["140","141","142","143","144","145","146","147"],"import React, { useEffect } from 'react';\r\nimport { useDispatch, useSelector } from 'react-redux';\r\nimport { useParams } from 'react-router';\r\nimport { Link } from 'react-router-dom';\r\nimport { listProducts } from '../actions/productActions';\r\nimport LoadingBox from '../components/LoadingBox';\r\nimport MessageBox from '../components/MessageBox';\r\nimport Product from '../components/Product';\r\n\r\nexport default function SearchScreen(props) {\r\n  const { name = 'all', category = 'all', city = 'all' } = useParams();\r\n  const dispatch = useDispatch();\r\n\r\n  const productList = useSelector((state) => state.productList);\r\n  const { loading, error, products } = productList;\r\n\r\n  const productCategoryList = useSelector((state) => state.productCategoryList);\r\n  const {\r\n    loading: loadingCategories,\r\n    error: errorCategories,\r\n    categories,\r\n  } = productCategoryList;\r\n\r\n  const productCityList = useSelector((state) => state.productCityList);\r\n  const {\r\n    loading: loadingCities,\r\n    error: errorCities,\r\n    cities,\r\n  } = productCityList;\r\n\r\n  useEffect(() => {\r\n    dispatch(\r\n      listProducts({\r\n        name: name !== 'all' ? name : '',\r\n        category: category !== 'all' ? category : '',\r\n        city: city !== 'all' ? city : '',\r\n      })\r\n    );\r\n  }, [category, city, dispatch, name]);\r\n\r\n  const getFilterUrl = (filter) => {\r\n    const filterCategory = filter.category || category;\r\n    const filterName = filter.name || name;\r\n    const filterCity = filter.city || city;\r\n    return `/search/category/${filterCategory}/city/${filterCity}/name/${filterName}`;\r\n  };\r\n\r\n  return (\r\n    <div>\r\n      <div className=\"col-1\">\r\n        {/* <div className=\"headers-center\">\r\n          <h1 className=\"headers\">Categories</h1>\r\n        </div> */}\r\n        {/* {loadingCategories ? (\r\n          <LoadingBox></LoadingBox>\r\n        ) : errorCategories ? (\r\n          <MessageBox variant=\"danger\">{error}</MessageBox>\r\n        ) : (\r\n          <div>\r\n            {categories.map((ca) => (\r\n              <button\r\n                className={\r\n                  ca === category\r\n                    ? 'categories-cities-active'\r\n                    : 'categories-cities'\r\n                }\r\n                key={ca}\r\n              >\r\n                <Link\r\n                  className=\"category-city\"\r\n                  to={getFilterUrl({ category: ca })}\r\n                >\r\n                  {ca}\r\n                </Link>\r\n              </button>\r\n            ))}\r\n          </div>\r\n        )} */}\r\n        {/* <div className=\"headers-center\">\r\n          <h1 className=\"headers\">Cities</h1>\r\n        </div> */}\r\n        {/* {loadingCities ? (\r\n          <LoadingBox></LoadingBox>\r\n        ) : errorCities ? (\r\n          <MessageBox variant=\"danger\">{error}</MessageBox>\r\n        ) : (\r\n          <div>\r\n            {cities.map((ci) => (\r\n              <button\r\n                className={\r\n                  ci === city ? 'categories-cities-active' : 'categories-cities'\r\n                }\r\n                key={ci}\r\n              >\r\n                <Link className=\"category-city\" to={getFilterUrl({ city: ci })}>\r\n                  {ci}\r\n                </Link>\r\n              </button>\r\n            ))}\r\n          </div>\r\n        )} */}\r\n      </div>\r\n      {loading ? (\r\n        <LoadingBox></LoadingBox>\r\n      ) : error ? (\r\n        <MessageBox variant=\"danger\">{error}</MessageBox>\r\n      ) : (\r\n        <>\r\n          {products.length === 0 && <MessageBox>No Product Found!</MessageBox>}\r\n          <div className=\"row center\">\r\n            {products.map((product) => (\r\n              <Product key={product._id} product={product}></Product>\r\n            ))}\r\n          </div>\r\n        </>\r\n      )}\r\n      {loading ? (\r\n        <LoadingBox></LoadingBox>\r\n      ) : error ? (\r\n        <MessageBox variant=\"danger\">{error}</MessageBox>\r\n      ) : (\r\n        <div className=\"results\">\r\n          <p className=\"result\">{products.length} product found.</p>\r\n        </div>\r\n      )}\r\n    </div>\r\n  );\r\n}\r\n","C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ProductScreen.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ShippingAddressScreen.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\PlaceOrderScreen.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\HomeScreen.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\cartReducers.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\orderReducers.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\SigninScreen.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\productReducers.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\userReducers.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\cartActions.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\LoadingBox.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\MessageBox.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\orderActions.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\Product.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\CheckoutSteps.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\userConstants.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\cartConstants.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\productConstants.js",[],"C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\orderConstants.js",[],{"ruleId":"148","replacedBy":"149"},{"ruleId":"150","replacedBy":"151"},{"ruleId":"152","severity":1,"message":"153","line":7,"column":3,"nodeType":"154","messageId":"155","endLine":7,"endColumn":15},{"ruleId":"152","severity":1,"message":"156","line":59,"column":9,"nodeType":"154","messageId":"155","endLine":59,"endColumn":19},{"ruleId":"152","severity":1,"message":"157","line":4,"column":10,"nodeType":"154","messageId":"155","endLine":4,"endColumn":14},{"ruleId":"152","severity":1,"message":"158","line":19,"column":14,"nodeType":"154","messageId":"155","endLine":19,"endColumn":31},{"ruleId":"152","severity":1,"message":"159","line":20,"column":12,"nodeType":"154","messageId":"155","endLine":20,"endColumn":27},{"ruleId":"152","severity":1,"message":"160","line":21,"column":5,"nodeType":"154","messageId":"155","endLine":21,"endColumn":15},{"ruleId":"152","severity":1,"message":"161","line":26,"column":14,"nodeType":"154","messageId":"155","endLine":26,"endColumn":27},{"ruleId":"152","severity":1,"message":"162","line":27,"column":12,"nodeType":"154","messageId":"155","endLine":27,"endColumn":23},{"ruleId":"152","severity":1,"message":"163","line":28,"column":5,"nodeType":"154","messageId":"155","endLine":28,"endColumn":11},{"ruleId":"152","severity":1,"message":"164","line":41,"column":9,"nodeType":"154","messageId":"155","endLine":41,"endColumn":21},"no-native-reassign",["165"],"no-negated-in-lhs",["166"],"no-unused-vars","'listProducts' is defined but never used.","Identifier","unusedVar","'filterCity' is assigned a value but never used.","'Link' is defined but never used.","'loadingCategories' is assigned a value but never used.","'errorCategories' is assigned a value but never used.","'categories' is assigned a value but never used.","'loadingCities' is assigned a value but never used.","'errorCities' is assigned a value but never used.","'cities' is assigned a value but never used.","'getFilterUrl' is assigned a value but never used.","no-global-assign","no-unsafe-negation"]
+[
+  {
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\index.js": "1",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reportWebVitals.js": "2",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\App.js": "3",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\store.js": "4",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\productActions.js": "5",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\userActions.js": "6",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\PrivateRoute.js": "7",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\SearchBox.js": "8",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\OrderHistoryScreen.js": "9",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\CartScreen.js": "10",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\OrderScreen.js": "11",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ProfileScreen.js": "12",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\RegisterScreen.js": "13",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\SearchScreen.js": "14",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ProductScreen.js": "15",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ShippingAddressScreen.js": "16",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\PlaceOrderScreen.js": "17",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\HomeScreen.js": "18",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\cartReducers.js": "19",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\orderReducers.js": "20",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\SigninScreen.js": "21",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\productReducers.js": "22",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\userReducers.js": "23",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\cartActions.js": "24",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\LoadingBox.js": "25",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\MessageBox.js": "26",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\orderActions.js": "27",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\Product.js": "28",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\CheckoutSteps.js": "29",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\userConstants.js": "30",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\cartConstants.js": "31",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\productConstants.js": "32",
+    "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\orderConstants.js": "33"
+  },
+  {
+    "size": 698,
+    "mtime": 1647087858936,
+    "results": "34",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 375,
+    "mtime": 1647087858938,
+    "results": "36",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 4897,
+    "mtime": 1647291718547,
+    "results": "37",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 2425,
+    "mtime": 1647087858943,
+    "results": "38",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 2115,
+    "mtime": 1647087858929,
+    "results": "39",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 3625,
+    "mtime": 1647087858930,
+    "results": "40",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 544,
+    "mtime": 1647282612917,
+    "results": "41",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 622,
+    "mtime": 1647282602358,
+    "results": "42",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 2186,
+    "mtime": 1647283486749,
+    "results": "43",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 3568,
+    "mtime": 1647282035498,
+    "results": "44",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 4244,
+    "mtime": 1647282951602,
+    "results": "45",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 3773,
+    "mtime": 1647284159441,
+    "results": "46",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 3153,
+    "mtime": 1647283916631,
+    "results": "47",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 4059,
+    "mtime": 1647291718549,
+    "results": "48",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 2672,
+    "mtime": 1647283544393,
+    "results": "49",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 3148,
+    "mtime": 1647281790573,
+    "results": "50",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 7254,
+    "mtime": 1647282582212,
+    "results": "51",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 3359,
+    "mtime": 1647287456172,
+    "results": "52",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 1563,
+    "mtime": 1647087858936,
+    "results": "53",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 1605,
+    "mtime": 1647087858937,
+    "results": "54",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 2497,
+    "mtime": 1647284198153,
+    "results": "55",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 2363,
+    "mtime": 1647087858937,
+    "results": "56",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 2528,
+    "mtime": 1647087858938,
+    "results": "57",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 1322,
+    "mtime": 1647287456170,
+    "results": "58",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 126,
+    "mtime": 1647282621678,
+    "results": "59",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 211,
+    "mtime": 1647087858931,
+    "results": "60",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 2560,
+    "mtime": 1647087858929,
+    "results": "61",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 889,
+    "mtime": 1647282028491,
+    "results": "62",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 359,
+    "mtime": 1647282574944,
+    "results": "63",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 874,
+    "mtime": 1647087858935,
+    "results": "64",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 212,
+    "mtime": 1647087858933,
+    "results": "65",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 820,
+    "mtime": 1647087858934,
+    "results": "66",
+    "hashOfConfig": "35"
+  },
+  {
+    "size": 614,
+    "mtime": 1647087858934,
+    "results": "67",
+    "hashOfConfig": "35"
+  },
+  {
+    "filePath": "68",
+    "messages": "69",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  "1i0ctt6",
+  {
+    "filePath": "71",
+    "messages": "72",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "73",
+    "messages": "74",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "75",
+    "messages": "76",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "77",
+    "messages": "78",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "79",
+    "messages": "80",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "81",
+    "messages": "82",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "83",
+    "messages": "84",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "85",
+    "messages": "86",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "87",
+    "messages": "88",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "89",
+    "messages": "90",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "91",
+    "messages": "92",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "93",
+    "messages": "94",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "95",
+    "messages": "96",
+    "errorCount": 0,
+    "warningCount": 8,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "97",
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "98",
+    "messages": "99",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "100",
+    "messages": "101",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "102",
+    "messages": "103",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "104",
+    "messages": "105",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "106",
+    "messages": "107",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "108",
+    "messages": "109",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "110",
+    "messages": "111",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "112",
+    "messages": "113",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "114",
+    "messages": "115",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "116",
+    "messages": "117",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "118",
+    "messages": "119",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "120",
+    "messages": "121",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "122",
+    "messages": "123",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "124",
+    "messages": "125",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "126",
+    "messages": "127",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "128",
+    "messages": "129",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "130",
+    "messages": "131",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "132"
+  },
+  {
+    "filePath": "133",
+    "messages": "134",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  {
+    "filePath": "135",
+    "messages": "136",
+    "errorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": "70"
+  },
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\index.js",
+  [],
+  [
+    "137",
+    "138"
+  ],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reportWebVitals.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\App.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\store.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\productActions.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\userActions.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\PrivateRoute.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\SearchBox.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\OrderHistoryScreen.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\CartScreen.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\OrderScreen.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ProfileScreen.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\RegisterScreen.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\SearchScreen.js",
+  [
+    "139",
+    "140",
+    "141",
+    "142",
+    "143",
+    "144",
+    "145",
+    "146"
+  ],
+  "import React, { useEffect } from 'react';\r\nimport { useDispatch, useSelector } from 'react-redux';\r\nimport { useParams } from 'react-router';\r\nimport { Link } from 'react-router-dom';\r\nimport { listProducts } from '../actions/productActions';\r\nimport LoadingBox from '../components/LoadingBox';\r\nimport MessageBox from '../components/MessageBox';\r\nimport Product from '../components/Product';\r\n\r\nexport default function SearchScreen(props) {\r\n  const { name = 'all', category = 'all', city = 'all' } = useParams();\r\n  const dispatch = useDispatch();\r\n\r\n  const productList = useSelector((state) => state.productList);\r\n  const { loading, error, products } = productList;\r\n\r\n  const productCategoryList = useSelector((state) => state.productCategoryList);\r\n  const {\r\n    loading: loadingCategories,\r\n    error: errorCategories,\r\n    categories,\r\n  } = productCategoryList;\r\n\r\n  const productCityList = useSelector((state) => state.productCityList);\r\n  const {\r\n    loading: loadingCities,\r\n    error: errorCities,\r\n    cities,\r\n  } = productCityList;\r\n\r\n  useEffect(() => {\r\n    dispatch(\r\n      listProducts({\r\n        name: name !== 'all' ? name : '',\r\n        category: category !== 'all' ? category : '',\r\n        city: city !== 'all' ? city : '',\r\n      })\r\n    );\r\n  }, [category, city, dispatch, name]);\r\n\r\n  const getFilterUrl = (filter) => {\r\n    const filterCategory = filter.category || category;\r\n    const filterName = filter.name || name;\r\n    const filterCity = filter.city || city;\r\n    return `/search/category/${filterCategory}/city/${filterCity}/name/${filterName}`;\r\n  };\r\n\r\n  return (\r\n    <div>\r\n      <div className=\"col-1\">\r\n        {/* <div className=\"headers-center\">\r\n          <h1 className=\"headers\">Categories</h1>\r\n        </div> */}\r\n        {/* {loadingCategories ? (\r\n          <LoadingBox></LoadingBox>\r\n        ) : errorCategories ? (\r\n          <MessageBox variant=\"danger\">{error}</MessageBox>\r\n        ) : (\r\n          <div>\r\n            {categories.map((ca) => (\r\n              <button\r\n                className={\r\n                  ca === category\r\n                    ? 'categories-cities-active'\r\n                    : 'categories-cities'\r\n                }\r\n                key={ca}\r\n              >\r\n                <Link\r\n                  className=\"category-city\"\r\n                  to={getFilterUrl({ category: ca })}\r\n                >\r\n                  {ca}\r\n                </Link>\r\n              </button>\r\n            ))}\r\n          </div>\r\n        )} */}\r\n        {/* <div className=\"headers-center\">\r\n          <h1 className=\"headers\">Cities</h1>\r\n        </div> */}\r\n        {/* {loadingCities ? (\r\n          <LoadingBox></LoadingBox>\r\n        ) : errorCities ? (\r\n          <MessageBox variant=\"danger\">{error}</MessageBox>\r\n        ) : (\r\n          <div>\r\n            {cities.map((ci) => (\r\n              <button\r\n                className={\r\n                  ci === city ? 'categories-cities-active' : 'categories-cities'\r\n                }\r\n                key={ci}\r\n              >\r\n                <Link className=\"category-city\" to={getFilterUrl({ city: ci })}>\r\n                  {ci}\r\n                </Link>\r\n              </button>\r\n            ))}\r\n          </div>\r\n        )} */}\r\n      </div>\r\n      {loading ? (\r\n        <LoadingBox></LoadingBox>\r\n      ) : error ? (\r\n        <MessageBox variant=\"danger\">{error}</MessageBox>\r\n      ) : (\r\n        <>\r\n          {products.length === 0 && <MessageBox>No Product Found!</MessageBox>}\r\n          <div className=\"row center\">\r\n            {products.map((product) => (\r\n              <Product key={product._id} product={product}></Product>\r\n            ))}\r\n          </div>\r\n        </>\r\n      )}\r\n      {loading ? (\r\n        <LoadingBox></LoadingBox>\r\n      ) : error ? (\r\n        <MessageBox variant=\"danger\">{error}</MessageBox>\r\n      ) : (\r\n        <div className=\"results\">\r\n          <p className=\"result\">{products.length} product found.</p>\r\n        </div>\r\n      )}\r\n    </div>\r\n  );\r\n}\r\n",
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ProductScreen.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\ShippingAddressScreen.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\PlaceOrderScreen.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\HomeScreen.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\cartReducers.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\orderReducers.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\screens\\SigninScreen.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\productReducers.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\reducers\\userReducers.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\cartActions.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\LoadingBox.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\MessageBox.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\actions\\orderActions.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\Product.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\components\\CheckoutSteps.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\userConstants.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\cartConstants.js",
+  [],
+  [
+    "147",
+    "148"
+  ],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\productConstants.js",
+  [],
+  "C:\\Users\\berka\\Documents\\GitHub\\Ecommerce\\frontend\\src\\constants\\orderConstants.js",
+  [],
+  {
+    "ruleId": "149",
+    "replacedBy": "150"
+  },
+  {
+    "ruleId": "151",
+    "replacedBy": "152"
+  },
+  {
+    "ruleId": "153",
+    "severity": 1,
+    "message": "154",
+    "line": 4,
+    "column": 10,
+    "nodeType": "155",
+    "messageId": "156",
+    "endLine": 4,
+    "endColumn": 14
+  },
+  {
+    "ruleId": "153",
+    "severity": 1,
+    "message": "157",
+    "line": 19,
+    "column": 14,
+    "nodeType": "155",
+    "messageId": "156",
+    "endLine": 19,
+    "endColumn": 31
+  },
+  {
+    "ruleId": "153",
+    "severity": 1,
+    "message": "158",
+    "line": 20,
+    "column": 12,
+    "nodeType": "155",
+    "messageId": "156",
+    "endLine": 20,
+    "endColumn": 27
+  },
+  {
+    "ruleId": "153",
+    "severity": 1,
+    "message": "159",
+    "line": 21,
+    "column": 5,
+    "nodeType": "155",
+    "messageId": "156",
+    "endLine": 21,
+    "endColumn": 15
+  },
+  {
+    "ruleId": "153",
+    "severity": 1,
+    "message": "160",
+    "line": 26,
+    "column": 14,
+    "nodeType": "155",
+    "messageId": "156",
+    "endLine": 26,
+    "endColumn": 27
+  },
+  {
+    "ruleId": "153",
+    "severity": 1,
+    "message": "161",
+    "line": 27,
+    "column": 12,
+    "nodeType": "155",
+    "messageId": "156",
+    "endLine": 27,
+    "endColumn": 23
+  },
+  {
+    "ruleId": "153",
+    "severity": 1,
+    "message": "162",
+    "line": 28,
+    "column": 5,
+    "nodeType": "155",
+    "messageId": "156",
+    "endLine": 28,
+    "endColumn": 11
+  },
+  {
+    "ruleId": "153",
+    "severity": 1,
+    "message": "163",
+    "line": 41,
+    "column": 9,
+    "nodeType": "155",
+    "messageId": "156",
+    "endLine": 41,
+    "endColumn": 21
+  },
+  {
+    "ruleId": "149",
+    "replacedBy": "164"
+  },
+  {
+    "ruleId": "151",
+    "replacedBy": "165"
+  },
+  "no-native-reassign",
+  [
+    "166"
+  ],
+  "no-negated-in-lhs",
+  [
+    "167"
+  ],
+  "no-unused-vars",
+  "'Link' is defined but never used.",
+  "Identifier",
+  "unusedVar",
+  "'loadingCategories' is assigned a value but never used.",
+  "'errorCategories' is assigned a value but never used.",
+  "'categories' is assigned a value but never used.",
+  "'loadingCities' is assigned a value but never used.",
+  "'errorCities' is assigned a value but never used.",
+  "'cities' is assigned a value but never used.",
+  "'getFilterUrl' is assigned a value but never used.",
+  [
+    "166"
+  ],
+  [
+    "167"
+  ],
+  "no-global-assign",
+  "no-unsafe-negation"
+]
