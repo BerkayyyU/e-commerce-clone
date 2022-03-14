@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter, Link, Route, useHistory } from 'react-router-dom';
 import {
   listProductCategories,
   listProductCities,
+  listProducts,
 } from './actions/productActions';
 import { signout } from './actions/userActions';
+import LoadingBox from './components/LoadingBox';
+import MessageBox from './components/MessageBox';
 import PrivateRoute from './components/PrivateRoute';
 import SearchBox from './components/SearchBox';
 import CartScreen from './screens/CartScreen';
@@ -37,10 +40,38 @@ function App() {
     dispatch(listProductCities());
   }, [dispatch]);
 
+  const productCategoryList = useSelector((state) => state.productCategoryList);
+  const {
+    loading: loadingCategories,
+    error: errorCategories,
+    categories,
+  } = productCategoryList;
+
+  const productCityList = useSelector((state) => state.productCityList);
+  const {
+    loading: loadingCities,
+    error: errorCities,
+    cities,
+  } = productCityList;
+
+  const history = useHistory();
+
+  const filterCity = (city) => {
+    history.push(`/search/city/${city}`);
+    // navigate(`/search/city/${city}`, { replace: true });
+  };
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   return (
     <BrowserRouter>
-      <div className="grid-container">
+      <div
+        className={
+          sidebarIsOpen
+            ? 'grid-container site-container active-cont'
+            : 'grid-container site-container'
+        }
+      >
         <header className="row">
+          <button onClick={() => setSidebarIsOpen(!sidebarIsOpen)}>Aç</button>
           <div>
             <Link className="brand" to="/">
               E-Commerce Clone
@@ -83,6 +114,43 @@ function App() {
             )}
           </div>
         </header>
+        <div
+          className={sidebarIsOpen ? 'active-nav side-navbar ' : 'side-navbar '}
+        >
+          {loadingCategories ? (
+            <LoadingBox></LoadingBox>
+          ) : errorCategories ? (
+            <MessageBox variant="danger">{}</MessageBox>
+          ) : (
+            <div>
+              <h3>Categories</h3>
+              {categories.map((c) => (
+                <p key={c}>
+                  <Link className="category-city" to={`/search/category/${c}`}>
+                    {c}
+                  </Link>
+                </p>
+              ))}
+            </div>
+          )}
+          {loadingCities ? (
+            <LoadingBox></LoadingBox>
+          ) : errorCities ? (
+            <MessageBox variant="danger">{}</MessageBox>
+          ) : (
+            <div>
+              <h3>Cities</h3>
+
+              {cities.map((ci) => (
+                <p key={ci}>
+                  <Link className="category-city" to={`/search/city/${ci}`}>
+                    {ci}
+                  </Link>
+                </p>
+              ))}
+            </div>
+          )}
+        </div>
         <main>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen}></Route>

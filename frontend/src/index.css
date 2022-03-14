@@ -332,3 +332,31 @@ img.large {
   padding: 3px 5px;
   border-radius: 50%;
 }
+
+/* sidebar */
+.navbar-brand {
+  font-weight: bold;
+}
+.side-navbar {
+  width: 230px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #100901;
+  padding: 10px;
+  transition: 0.5s;
+}
+.site-container {
+  transition: 0.4s;
+}
+.active-cont {
+  margin-left: 250px;
+}
+
+.active-nav {
+  left: 0;
+}
+
+.category-city {
+  color: #fff;
+}

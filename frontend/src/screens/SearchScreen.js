@@ -20,7 +20,6 @@ export default function SearchScreen(props) {
     error: errorCategories,
     categories,
   } = productCategoryList;
-  console.log(productCategoryList);
 
   const productCityList = useSelector((state) => state.productCityList);
   const {
@@ -28,7 +27,6 @@ export default function SearchScreen(props) {
     error: errorCities,
     cities,
   } = productCityList;
-  console.log(productCityList);
 
   useEffect(() => {
     dispatch(
@@ -50,10 +48,10 @@ export default function SearchScreen(props) {
   return (
     <div>
       <div className="col-1">
-        <div className="headers-center">
+        {/* <div className="headers-center">
           <h1 className="headers">Categories</h1>
-        </div>
-        {loadingCategories ? (
+        </div> */}
+        {/* {loadingCategories ? (
           <LoadingBox></LoadingBox>
         ) : errorCategories ? (
           <MessageBox variant="danger">{error}</MessageBox>
@@ -77,11 +75,11 @@ export default function SearchScreen(props) {
               </button>
             ))}
           </div>
-        )}
-        <div className="headers-center">
+        )} */}
+        {/* <div className="headers-center">
           <h1 className="headers">Cities</h1>
-        </div>
-        {loadingCities ? (
+        </div> */}
+        {/* {loadingCities ? (
           <LoadingBox></LoadingBox>
         ) : errorCities ? (
           <MessageBox variant="danger">{error}</MessageBox>
@@ -100,7 +98,7 @@ export default function SearchScreen(props) {
               </button>
             ))}
           </div>
-        )}
+        )} */}
       </div>
       {loading ? (
         <LoadingBox></LoadingBox>
