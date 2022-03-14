@@ -1,9 +1,5 @@
 import React from 'react';
 
-export default function LoadingBox(){
-    return (
-        <div className="loading">
-            Yükleniyor...
-        </div>
-    );
+export default function LoadingBox() {
+  return <div className="loading">Loading...</div>;
 }

@@ -15,7 +15,7 @@ export default function OrderHistoryScreen(props) {
   return (
     <div>
       <div className="headers-center">
-        <h1 className="headers">Sipariş Geçmişi</h1>
+        <h1 className="headers">Order History</h1>
       </div>
       {loading ? (
         <LoadingBox></LoadingBox>
@@ -26,9 +26,9 @@ export default function OrderHistoryScreen(props) {
           <table className="table">
             <thead>
               <tr>
-                <th>Sipariş No</th>
-                <th>Tarih</th>
-                <th>Fiyat</th>
+                <th>Order</th>
+                <th>Date</th>
+                <th>Total</th>
                 <th></th>
               </tr>
             </thead>
@@ -37,7 +37,14 @@ export default function OrderHistoryScreen(props) {
                 <tr key={order._id}>
                   <td>{order._id}</td>
                   <td>{order.createdAt.substring(0, 10)}</td>
-                  <td><CurrencyFormat value={order.totalPrice} displayType={'text'} thousandSeparator={true} suffix="₺"></CurrencyFormat></td>
+                  <td>
+                    <CurrencyFormat
+                      value={order.totalPrice}
+                      displayType={'text'}
+                      thousandSeparator={true}
+                      prefix="€"
+                    ></CurrencyFormat>
+                  </td>
                   <td>
                     <button
                       type="button"
@@ -46,7 +53,7 @@ export default function OrderHistoryScreen(props) {
                         props.history.push(`/order/${order._id}`);
                       }}
                     >
-                      Sipariş Detayı
+                      Order Details
                     </button>
                   </td>
                 </tr>
@@ -54,7 +61,6 @@ export default function OrderHistoryScreen(props) {
             </tbody>
           </table>
         </div>
-        
       )}
     </div>
   );

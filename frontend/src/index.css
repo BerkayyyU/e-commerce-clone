@@ -1,8 +1,8 @@
-html{
+html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
-body{
+body {
   margin: 0;
   height: 100vh;
   font-size: 1.6rem;
@@ -10,61 +10,64 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#root{
+#root {
   height: 100%;
 }
-.grid-container{
+.grid-container {
   display: grid;
-  grid-template-areas: 
-  "header"
-  "main"
-  "footer";
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
 }
-.masonry{
+.masonry {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: masonry;
 }
-header{
+header {
   grid-area: header;
   background-color: rgb(153, 16, 43);
 }
-main{
+main {
   grid-area: main;
   padding: 1rem;
 }
-footer{
+footer {
   grid-area: footer;
   background-color: rgb(153, 16, 43);
   color: white;
 }
 
-h1{
+h1 {
   font-size: 1.8rem;
   padding: 1rem 0;
 }
-h2{
+h2 {
   font-size: 1.6rem;
   padding: 1rem 0;
 }
-a{
+a {
   text-decoration: none;
 }
-a:hover{
+a:hover {
   color: #ff8000;
 }
-ul{
+ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-li{
+li {
   margin-top: 1rem;
 }
-button, select, textarea, input{
+button,
+select,
+textarea,
+input {
   padding: 1rem;
   border-radius: 0.5rem;
   border: 0.1rem #a4a4a4 solid;
@@ -75,40 +78,40 @@ button, select, textarea, input{
   background-color: #f8f8f8;
   cursor: pointer;
 }
-button:hover{
+button:hover {
   border: 0.1rem #404040 solid;
 }
-button.primary{
+button.primary {
   background-color: rgb(153, 16, 43);
   color: #ffffff;
 }
-button.primary-green{
+button.primary-green {
   background-color: #009933;
   color: #ffffff;
 }
-button.block{
+button.block {
   width: 100%;
 }
-button.small{
+button.small {
   font-size: 1.2rem;
 }
-button.block-green{
+button.block-green {
   width: 100%;
   background-color: #009933;
   color: #ffffff;
 }
 
 /* Header */
-header a{
+header a {
   color: #ffffff;
   padding: 1rem;
 }
-a.brand{
+a.brand {
   color: #ffffff;
   font-size: 3rem;
   font-weight: bold;
 }
-.badge{
+.badge {
   background-color: blue;
   color: #ffffff;
   border-radius: 50%;
@@ -116,82 +119,82 @@ a.brand{
   font-size: 1.4rem;
   margin-left: 0.2rem;
 }
-.row{
+.row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-.row.center{
+.row.center {
   justify-content: center;
 }
-.row.top{
+.row.top {
   align-items: flex-start;
   margin-top: 2rem;
   margin-left: 2rem;
 }
-.col-1{
+.col-1 {
   flex: 1 1 25rem;
   margin-left: 5rem;
 }
-.col-2{
+.col-2 {
   flex: 2 1 50rem;
 }
-.min-30{
+.min-30 {
   min-width: 30rem;
 }
 
 /* Image */
-img{
+img {
   border-radius: 0.5rem;
 }
-img.small{
+img.small {
   max-width: 10rem;
   width: 100%;
 }
-img.medium{
+img.medium {
   max-width: 17rem;
   width: 100%;
 }
-img.large{
+img.large {
   width: 40%;
 }
 
 /* Card */
-.card{
+.card {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
   border-radius: 0.5rem;
   margin: 1rem;
 }
-.card-body{
+.card-body {
   padding: 1rem;
 }
-.card-body > *{
+.card-body > * {
   margin-bottom: 0.5rem;
 }
-.product-info{
+.product-info {
   font-size: 1.5rem;
   padding-bottom: 0.7rem;
 }
-.price{
+.price {
   font-size: 2rem;
 }
 
 /* Alert */
-.loading{
-  display: block  !important;
+.loading {
+  display: block !important;
 }
-.alert{
+.alert {
   padding: 1rem;
   border: 0.1rem solid transparent;
   border-radius: 0.5rem;
 }
-.alert-info{
+.alert-info {
   color: #2020a0;
   background-color: #e0e0ff;
 }
-.alert-danger{
+.alert-danger {
   color: #a02020;
   background-color: #ffe0e0e0;
 }
@@ -200,26 +203,26 @@ img.large{
 }
 
 /* Form */
-.form{
+.form {
   max-width: 60rem;
   margin: 0 auto;
 }
-.form > div{
+.form > div {
   display: flex;
   flex-direction: column;
   margin: 1rem;
 }
-.form label{
+.form label {
   margin: 1rem 0;
   font-weight: bold;
 }
 
 /* Dropdown (Signout) */
-.dropdown{
+.dropdown {
   display: inline-block;
   position: relative;
 }
-.dropdown-content{
+.dropdown-content {
   position: absolute;
   display: none;
   right: 0;
@@ -231,7 +234,7 @@ img.large{
   margin-top: 0.4rem;
   border-radius: 0.5rem;
 }
-.dropdown:hover .dropdown-content{
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
@@ -250,70 +253,82 @@ img.large{
 }
 
 /* Search */
-.search button{
+.search button {
   border-radius: 0 0.5rem 0.5rem 0;
   border-right: none;
   margin-right: 0.5rem;
 }
-.search input{
+.search input {
   border-radius: 0.5rem 0 0 0.5rem;
   border-right: none;
   margin-left: 0.5rem;
 }
 
 /*More CSS*/
-.categories-cities{
+.categories-cities {
   color: #ffffff;
   background-color: rgb(153, 16, 43);
   margin: 3rem 6.5rem 3rem 6.5rem;
 }
-.category-city{
+.category-city {
   color: #ffffff;
 }
-.categories-cities-active{
+.categories-cities-active {
   color: #ffffff;
   background-color: #009933;
   margin: 3rem 6.5rem 3rem 6.5rem;
 }
-.results{
+.results {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20rem;
 }
-.result{
+.result {
   color: black;
   font-size: 2rem;
 }
-.headers{
+.headers {
   font-size: 3rem;
   margin-top: 2rem;
 }
-.headers-small{
+.headers-small {
   font-size: 2rem;
 }
-.headers-center{
+.headers-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /*Order History Table*/
-.table{
+.table {
   width: 90%;
   border-collapse: collapse;
 }
-.table tbody tr:nth-of-type(odd){
+.table tbody tr:nth-of-type(odd) {
   background-color: #f4f4f4;
 }
-.table td, .table th{
+.table td,
+.table th {
   text-align: center;
   border: 0.1rem solid #e4e4e4;
   padding: 1rem;
 }
-.table button{
+.table button {
   margin: 0 0.2rem;
 }
-.table td{
+.table td {
   text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+.cart-total {
+  background: #f08000;
+  color: #ffffff;
+  margin-right: 10px;
+  padding: 3px 5px;
+  border-radius: 50%;
 }
