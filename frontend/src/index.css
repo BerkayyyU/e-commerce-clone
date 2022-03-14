@@ -360,3 +360,12 @@ img.large {
 .category-city {
   color: #fff;
 }
+
+.header-menu-icon-brand {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  margin-left: 5px;
+}

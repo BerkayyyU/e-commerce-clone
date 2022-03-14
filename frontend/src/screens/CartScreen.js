@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import MessageBox from '../components/MessageBox';
 import CurrencyFormat from 'react-currency-format';
+import { FaTrash } from 'react-icons/fa';
 
 export default function CartScreen(props) {
   const productId = props.match.params.id;
@@ -69,7 +70,7 @@ export default function CartScreen(props) {
                       className="primary block"
                       onClick={() => removeFromCartHandler(item.product)}
                     >
-                      X
+                      <FaTrash> </FaTrash>
                     </button>
                   </div>
                 </div>

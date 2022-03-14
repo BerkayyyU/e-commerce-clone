@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { BrowserRouter, Link, Route, useHistory } from 'react-router-dom';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
 import {
   listProductCategories,
   listProductCities,
-  listProducts,
 } from './actions/productActions';
 import { signout } from './actions/userActions';
 import LoadingBox from './components/LoadingBox';
@@ -22,6 +21,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import SearchScreen from './screens/SearchScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
+import { FaBars } from 'react-icons/fa';
 
 function App() {
   const cart = useSelector((state) => state.cart); // useSelector sayesinde redux store'ı çağırırz.
@@ -54,12 +54,6 @@ function App() {
     cities,
   } = productCityList;
 
-  const history = useHistory();
-
-  const filterCity = (city) => {
-    history.push(`/search/city/${city}`);
-    // navigate(`/search/city/${city}`, { replace: true });
-  };
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   return (
     <BrowserRouter>
@@ -71,8 +65,14 @@ function App() {
         }
       >
         <header className="row">
-          <button onClick={() => setSidebarIsOpen(!sidebarIsOpen)}>Aç</button>
-          <div>
+          <div className="header-menu-icon-brand">
+            <button
+              className="menu-icon"
+              onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
+            >
+              {' '}
+              <FaBars />
+            </button>
             <Link className="brand" to="/">
               E-Commerce Clone
             </Link>

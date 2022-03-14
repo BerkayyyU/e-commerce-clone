@@ -47,7 +47,7 @@ export default function HomeScreen(props) {
   return (
     <div>
       <div className="col-1">
-        <div className="headers-center">
+        {/* <div className="headers-center">
           <h1 className="headers">Categories</h1>
         </div>
         {loadingCategories ? (
@@ -90,7 +90,7 @@ export default function HomeScreen(props) {
               </button>
             ))}
           </div>
-        )}
+        )} */}
       </div>
       {loading ? (
         <LoadingBox></LoadingBox>
@@ -98,8 +98,8 @@ export default function HomeScreen(props) {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div className="row center">
-          {products.map((product) => (
-            <Product product={product}></Product>
+          {products.map((product, i) => (
+            <Product product={product} key={i}></Product>
           ))}
         </div>
       )}
