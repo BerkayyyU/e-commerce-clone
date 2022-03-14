@@ -1,10 +1,10 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  overflow-y: hidden;
 }
 body {
   margin: 0;
-  height: 100vh;
   font-size: 1.6rem;
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -33,6 +33,8 @@ header {
   background-color: rgb(153, 16, 43);
 }
 main {
+  overflow-y: auto;
+  height: 87vh;
   grid-area: main;
   padding: 1rem;
 }
@@ -339,10 +341,11 @@ img.large {
 }
 .side-navbar {
   width: 230px;
-  height: 100%;
+  overflow-y: auto;
+  height: 97.8vh;
   position: absolute;
   left: -300px;
-  background-color: #100901;
+  background-color: rgb(153, 16, 43);
   padding: 10px;
   transition: 0.5s;
 }
@@ -368,4 +371,40 @@ img.large {
 
 .menu-icon {
   margin-left: 5px;
+}
+
+.sidebar-title {
+  color: #fff;
+  text-align: center;
+}
+
+.sidebar-responsive {
+  display: none;
+}
+.sidebar-responsive a {
+  color: #fff;
+}
+
+@media screen and (max-width: 1028px) {
+  .navbar-responsive {
+    display: none;
+  }
+
+  .sidebar-responsive {
+    display: block;
+  }
+
+  .sidebar-responsive .cart-total {
+    margin-right: 0px;
+    margin-left: 4px;
+  }
+
+  .search input {
+    width: 162px;
+  }
+
+  a.brand {
+    text-align: center;
+    margin: 10px 0px;
+  }
 }

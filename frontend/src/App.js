@@ -73,11 +73,11 @@ function App() {
               {' '}
               <FaBars />
             </button>
-            <Link className="brand" to="/">
-              E-Commerce Clone
+            <Link className="brand navbar-responsive" to="/">
+              E-Commerce
             </Link>
           </div>
-          <div>
+          <div className="navbar-responsive">
             <Route
               render={({ history }) => (
                 <SearchBox
@@ -86,7 +86,7 @@ function App() {
               )}
             ></Route>
           </div>
-          <div>
+          <div className="navbar-responsive">
             <Link to="/cart">Cart</Link>
             {cartItems.length > 0 && (
               <span className="cart-total">{cartItems.length}</span>
@@ -117,13 +117,55 @@ function App() {
         <div
           className={sidebarIsOpen ? 'active-nav side-navbar ' : 'side-navbar '}
         >
+          <div>
+            <Link className="sidebar-responsive brand" to="/">
+              E-Commerce
+            </Link>
+          </div>
+          <div className="sidebar-responsive sidebar-search">
+            <Route
+              render={({ history }) => (
+                <SearchBox
+                  history={history}
+                ></SearchBox> /*Pass react router dom properties to the search box using render function */
+              )}
+            ></Route>
+            <hr></hr>
+          </div>
+
+          <div className="sidebar-responsive">
+            {userInfo ? (
+              <div>
+                <p>
+                  <Link to="/profile">Profile</Link>
+                </p>
+                <p>
+                  <Link to="/orderhistory">Order History</Link>
+                </p>
+                <p>
+                  <Link to="#signout" onClick={signoutHandler}>
+                    Sign Out
+                  </Link>
+                </p>
+              </div>
+            ) : (
+              <Link to="/signin">Sign In</Link>
+            )}
+            <hr></hr>
+            <Link to="/cart">Cart</Link>
+            {cartItems.length > 0 && (
+              <span className="cart-total">{cartItems.length}</span>
+            )}
+            <hr></hr>
+          </div>
+
           {loadingCategories ? (
             <LoadingBox></LoadingBox>
           ) : errorCategories ? (
             <MessageBox variant="danger">{}</MessageBox>
           ) : (
             <div>
-              <h3>Categories</h3>
+              <h3 className="sidebar-title">Categories</h3>
               {categories.map((c) => (
                 <p key={c}>
                   <Link className="category-city" to={`/search/category/${c}`}>
@@ -133,13 +175,14 @@ function App() {
               ))}
             </div>
           )}
+          <hr></hr>
           {loadingCities ? (
             <LoadingBox></LoadingBox>
           ) : errorCities ? (
             <MessageBox variant="danger">{}</MessageBox>
           ) : (
             <div>
-              <h3>Cities</h3>
+              <h3 className="sidebar-title">Cities</h3>
 
               {cities.map((ci) => (
                 <p key={ci}>

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 import { listProducts } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
@@ -14,20 +13,6 @@ export default function SearchScreen(props) {
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
 
-  const productCategoryList = useSelector((state) => state.productCategoryList);
-  const {
-    loading: loadingCategories,
-    error: errorCategories,
-    categories,
-  } = productCategoryList;
-
-  const productCityList = useSelector((state) => state.productCityList);
-  const {
-    loading: loadingCities,
-    error: errorCities,
-    cities,
-  } = productCityList;
-
   useEffect(() => {
     dispatch(
       listProducts({
@@ -38,68 +23,8 @@ export default function SearchScreen(props) {
     );
   }, [category, city, dispatch, name]);
 
-  const getFilterUrl = (filter) => {
-    const filterCategory = filter.category || category;
-    const filterName = filter.name || name;
-    const filterCity = filter.city || city;
-    return `/search/category/${filterCategory}/city/${filterCity}/name/${filterName}`;
-  };
-
   return (
     <div>
-      <div className="col-1">
-        {/* <div className="headers-center">
-          <h1 className="headers">Categories</h1>
-        </div> */}
-        {/* {loadingCategories ? (
-          <LoadingBox></LoadingBox>
-        ) : errorCategories ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
-          <div>
-            {categories.map((ca) => (
-              <button
-                className={
-                  ca === category
-                    ? 'categories-cities-active'
-                    : 'categories-cities'
-                }
-                key={ca}
-              >
-                <Link
-                  className="category-city"
-                  to={getFilterUrl({ category: ca })}
-                >
-                  {ca}
-                </Link>
-              </button>
-            ))}
-          </div>
-        )} */}
-        {/* <div className="headers-center">
-          <h1 className="headers">Cities</h1>
-        </div> */}
-        {/* {loadingCities ? (
-          <LoadingBox></LoadingBox>
-        ) : errorCities ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
-          <div>
-            {cities.map((ci) => (
-              <button
-                className={
-                  ci === city ? 'categories-cities-active' : 'categories-cities'
-                }
-                key={ci}
-              >
-                <Link className="category-city" to={getFilterUrl({ city: ci })}>
-                  {ci}
-                </Link>
-              </button>
-            ))}
-          </div>
-        )} */}
-      </div>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
