@@ -239,7 +239,6 @@ function App() {
           ></PrivateRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center"> Copyright @2022 Berkay Ülgüel</footer>
       </div>
     </BrowserRouter>
   );
